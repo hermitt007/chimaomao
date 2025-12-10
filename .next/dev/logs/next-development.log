@@ -1,0 +1,190 @@
+[00:00:00.838] Server  LOG      ✓ Ready in 488ms
+[00:00:10.619] Server  LOG      ○ Compiling / ...
+[00:00:19.480] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:20.182] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:20.182] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:20.182] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/","r":"https://refactored-halibut-r4g54pvgq9ggf5wr9.github.dev/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765341554649}
+[00:00:50.107] Server  LOG     [Local Downloader] Procesando: https://www.youtube.com/watch?v=zOSPONmT4KM&list=RDhQmbfLvT4js&index=3
+[00:00:50.732] Server  ERROR   [Local Downloader Error]: Error: Sign in to confirm you’re not a bot
+[00:00:56.804] Server  LOG     [Local Downloader] Procesando: https://www.youtube.com/watch?v=zOSPONmT4KM&list=RDhQmbfLvT4js&index=3
+[00:00:57.709] Server  ERROR   [Local Downloader Error]: Error: Sign in to confirm you’re not a bot
+[00:02:56.803] Server  LOG      ✓ Compiled in 142ms
+[00:04:01.364] Server  LOG     [Cobalt Proxy] Procesando: https://www.youtube.com/watch?v=DShMAaxHjE8&list=RDhQmbfLvT4js&index=3
+[00:04:01.365] Server  LOG     Trying instance: https://api.cobalt.tools
+[00:04:01.676] Server  LOG     Trying instance: https://cobalt.wuk.sh
+[00:04:01.929] Server  WARN    Fallo en instancia https://cobalt.wuk.sh, probando siguiente...
+[00:04:01.930] Server  LOG     Trying instance: https://cobalt.tools
+[00:04:01.999] Server  WARN    Fallo en instancia https://cobalt.tools, probando siguiente...
+[00:04:02.355] Browser ERROR   {}
+[00:04:17.347] Server  LOG     [Cobalt Proxy] Procesando: https://www.youtube.com/watch?v=DShMAaxHjE8&list=RDhQmbfLvT4js&index=3
+[00:04:17.347] Server  LOG     Trying instance: https://api.cobalt.tools
+[00:04:17.476] Server  LOG     Trying instance: https://cobalt.wuk.sh
+[00:04:17.719] Server  WARN    Fallo en instancia https://cobalt.wuk.sh, probando siguiente...
+[00:04:17.720] Server  LOG     Trying instance: https://cobalt.tools
+[00:04:17.757] Server  WARN    Fallo en instancia https://cobalt.tools, probando siguiente...
+[00:04:18.055] Browser ERROR   {}
+[00:05:11.219] Server  LOG     [Cobalt Proxy] Procesando: https://www.youtube.com/watch?v=DShMAaxHjE8&list=RDhQmbfLvT4js&index=3
+[00:05:11.220] Server  LOG     Trying instance: https://api.cobalt.tools
+[00:05:11.352] Server  LOG     Trying instance: https://cobalt.wuk.sh
+[00:05:11.628] Server  WARN    Fallo en instancia https://cobalt.wuk.sh, probando siguiente...
+[00:05:11.628] Server  LOG     Trying instance: https://cobalt.tools
+[00:05:11.670] Server  WARN    Fallo en instancia https://cobalt.tools, probando siguiente...
+[00:05:11.918] Browser ERROR   {}
+[00:07:03.444] Server  LOG      ✓ Compiled in 214ms
+[00:07:27.481] Server  LOG     [Hybrid Downloader] Iniciando para: https://www.youtube.com/watch?v=DShMAaxHjE8&list=RDhQmbfLvT4js&index=3
+[00:07:27.481] Server  LOG     [Hybrid] Probando instancia: https://api.cobalt.tools
+[00:07:27.939] Server  LOG     [Hybrid] Probando instancia: https://cobalt.wuk.sh
+[00:07:28.182] Server  LOG     [Hybrid] Probando instancia: https://cobalt.kwiatekmiki.com
+[00:07:28.280] Server  LOG     [Hybrid] Probando instancia: https://cobalt-api.kwiatekmiki.com
+[00:07:28.682] Server  LOG     [Hybrid] Cobalt falló. Intentando motor local (ytdl-core)...
+[00:07:29.377] Server  ERROR   [Hybrid Error]: Error: Sign in to confirm you’re not a bot
+[00:07:29.704] Browser ERROR   {}
+[00:09:24.230] Server  LOG      ✓ Compiled in 62ms
+[00:09:39.233] Browser LOG     Probando instancia: https://api.cobalt.tools
+[00:09:40.728] Browser LOG     Probando instancia: https://cobalt.wuk.sh
+[00:09:41.855] Browser WARN    Falló instancia https://cobalt.wuk.sh, siguiente...
+[00:09:41.855] Browser LOG     Probando instancia: https://cobalt.kwiatekmiki.com
+[00:09:43.380] Browser WARN    Falló instancia https://cobalt.kwiatekmiki.com, siguiente...
+[00:09:43.380] Browser ERROR   {}
+[00:10:28.278] Browser LOG     Probando instancia: https://api.cobalt.tools
+[00:10:29.142] Browser LOG     Probando instancia: https://cobalt.wuk.sh
+[00:10:29.512] Browser WARN    Falló instancia https://cobalt.wuk.sh, siguiente...
+[00:10:29.512] Browser LOG     Probando instancia: https://cobalt.kwiatekmiki.com
+[00:10:29.832] Browser WARN    Falló instancia https://cobalt.kwiatekmiki.com, siguiente...
+[00:10:29.832] Browser ERROR   {}
+[00:13:12.742] Server  LOG      ✓ Compiled in 85ms
+[00:13:40.185] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:40.578] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:13:40.578] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:13:40.578] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765342355039}
+[00:13:52.789] Browser LOG     Enlace obtenido: https://rr2---sn-vgqsrnek.googlevideo.com/videoplayback?expire=1765345957&ei=RbY4abOvObKIkucPlc6jyAQ&ip=2603%3A7080%3A2300%3Ae0cf%3A8c06%3A1603%3Ad547%3Aed47&id=o-AM2Nt5pXgTp8h-QzJ4gxoI0do2PMiufYMT6y29-g6EW4&itag=136&aitags=133%2C134%2C135%2C136%2C137%2C160%2C242%2C243%2C244%2C247%2C248%2C278%2C394%2C395%2C396%2C397%2C398%2C399&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&met=1765324357%2C&mh=bi&mm=31%2C26&mn=sn-vgqsrnek%2Csn-ab5sznzd&ms=au%2Conr&mv=m&mvi=2&pl=38&rms=au%2Cau&initcwndbps=3651250&bui=AYUSA3B9Gbq82zxu-TBffxbc8lJG85OU5LfeoREGY9qDWKFb4lMXp_JqRXl0mbQ0eQ35bxxdXqHSsPCe&spc=wH4Qq1WOD8P7LbgDIKYPAKL8lD1Rr4D5BNCtIszIH4XX_pbNg-NpgeM1O3Vokr_f4wU&vprv=1&svpuc=1&mime=video%2Fmp4&ns=9YyuUYXKN7lo_hIyfei5zmoQ&rqh=1&gir=yes&clen=1255314&dur=296.829&lmt=1726194382612598&mt=1765324136&fvip=3&keepalive=yes&fexp=51552689%2C51565116%2C51565682%2C51580968%2C51669167%2C51673847&c=WEB_EMBEDDED_PLAYER&sefc=1&txp=4535434&n=K1-8AB9bXefT3Q&sparams=expire%2Cei%2Cip%2Cid%2Caitags%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&lsparams=met%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=APaTxxMwRgIhAJpGhTjfCm2wIicSGYTU9gZBkPHdWtb6O3FRKaTPt4xeAiEAtbBsOZw9eWBvq769ZejwzXuVDZyfMWCJDrpK57Sdk1Y%3D&sig=AJfQdSswRgIhAOgKKnoJWlljXkiYOUW-T-MLq04VjanvOKB2PQgIIk79AiEAxaI4KGGCrxZm_SB7IPMvMPOtDfIgMs6HEpoKOr3Patw%3D
+[00:16:02.923] Browser ERROR   {}
+[00:16:48.532] Browser LOG     Enlace obtenido: https://rr4---sn-n0qqxoapo3-jaal.googlevideo.com/videoplayback?expire=1765346133&ei=9bY4afrxCIPB-coP_IfM4AY&ip=72.47.129.69&id=o-ALPnW9DhLadI0s0MoTwWvAAs0Zd1lbqkjTQv51Ewc8yj&itag=136&aitags=133%2C134%2C135%2C136%2C137%2C160%2C242%2C243%2C244%2C247%2C248%2C278%2C394%2C395%2C396%2C397%2C398%2C399&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&cps=359&met=1765324533%2C&mh=Aj&mm=31%2C29&mn=sn-n0qqxoapo3-jaal%2Csn-q4fl6n6r&ms=au%2Crdu&mv=m&mvi=4&pl=22&rms=au%2Cau&initcwndbps=3387500&bui=AYUSA3DEec0INWYvqNnsFIBo2U30UBwlF-0FHIkQz3-zkKGIMHNu5HNMQVZm4baTIIpI2jjtl3lpp9h5&spc=wH4QqxYh4XqWhMEJQ6mkfw2gD6W2_Msm9wn4QHa0obWt8_yn1w1J_zqCwZ11_-ozJcU&vprv=1&svpuc=1&mime=video%2Fmp4&ns=vp18ioTDIhkf9Dy_Mkd6YKIQ&rqh=1&gir=yes&clen=11054584&dur=281.399&lmt=1751167118248290&mt=1765324136&fvip=3&keepalive=yes&fexp=51552689%2C51565116%2C51565682%2C51580968%2C51669167%2C51673847&c=WEB_EMBEDDED_PLAYER&sefc=1&txp=5535534&n=Yyo9I3SsUJhKmA&sparams=expire%2Cei%2Cip%2Cid%2Caitags%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&lsparams=cps%2Cmet%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=APaTxxMwRAIgfo0scATkUiO830YSPovr8nNbXU8NfezhDZz02YHGfEECIH7perdShNT3MKrsuEKkegaExMkmrLhMQ266RSYhkXAO&sig=AJfQdSswRgIhAKyM7PaLrg6YT4X0niKjjCaLgofeZO-5xRW_HB7o4YSzAiEAsjEw4LWIqY3Ca1bVCb5XDsAMmRXj0JIeWvyocH2mZ78%3D
+[00:16:49.381] Browser ERROR   {}
+[00:23:33.940] Server  LOG      ✓ Compiled in 194ms
+[00:24:03.662] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:24:03.663] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:24:03.663] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:24:03.663] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765342978259}
+[00:24:09.891] Browser LOG     Probando: https://cobalt.wuk.sh
+[00:24:10.451] Browser WARN    Falló https://cobalt.wuk.sh
+[00:24:10.451] Browser LOG     Probando: https://api.cobalt.tools
+[00:24:12.149] Browser LOG     Probando: https://cobalt.kwiatekmiki.com
+[00:24:12.959] Browser WARN    Falló https://cobalt.kwiatekmiki.com
+[00:24:12.959] Browser ERROR   {}
+[00:24:15.711] Browser LOG     Probando: https://cobalt.wuk.sh
+[00:24:15.961] Browser WARN    Falló https://cobalt.wuk.sh
+[00:24:15.961] Browser LOG     Probando: https://api.cobalt.tools
+[00:24:16.510] Browser LOG     Probando: https://cobalt.kwiatekmiki.com
+[00:24:16.634] Browser WARN    Falló https://cobalt.kwiatekmiki.com
+[00:24:16.634] Browser ERROR   {}
+[00:36:14.319] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:36:14.319] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:36:14.319] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:36:14.319] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765343708941}
+[00:36:36.871] Browser LOG     Probando: https://cobalt.wuk.sh
+[00:36:37.739] Browser WARN    Falló https://cobalt.wuk.sh
+[00:36:37.739] Browser LOG     Probando: https://api.cobalt.tools
+[00:36:39.038] Browser LOG     Probando: https://cobalt.kwiatekmiki.com
+[00:36:39.856] Browser WARN    Falló https://cobalt.kwiatekmiki.com
+[00:36:39.856] Browser ERROR   {}
+[00:38:36.622] Server  LOG      ✓ Compiled in 127ms
+[00:38:37.873] Server  LOG      ✓ Compiled in 97ms
+[00:39:35.238] Browser ERROR   ./components/video-generator.tsx:6:1
+Export BackgroundVideoSelector doesn't exist in target module
+  4 | import { ScriptInput } from "@/components/script-input"
+  5 | import { VideoFormatSelector } from "@/components/video-format-selector"
+> 6 | import { BackgroundVideoSelector } from "@/components/background-video-selector"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { VideoPreview, type VideoPreviewHandle } from "@/components/video-preview"
+  8 | import { GenerateButton } from "@/components/generate-button"
+  9 | import { TextStyleSelector, type TextStyle } from "@/components/text-style-selector"
+
+The export BackgroundVideoSelector was not found in module [project]/components/background-video-selector.tsx [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/video-generator.tsx
+    ./app/page.tsx
+[00:39:35.238] Browser ERROR   ./components/video-generator.tsx:6:1
+Export BackgroundVideoSelector doesn't exist in target module
+  4 | import { ScriptInput } from "@/components/script-input"
+  5 | import { VideoFormatSelector } from "@/components/video-format-selector"
+> 6 | import { BackgroundVideoSelector } from "@/components/background-video-selector"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { VideoPreview, type VideoPreviewHandle } from "@/components/video-preview"
+  8 | import { GenerateButton } from "@/components/generate-button"
+  9 | import { TextStyleSelector, type TextStyle } from "@/components/text-style-selector"
+
+The export BackgroundVideoSelector was not found in module [project]/components/background-video-selector.tsx [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/video-generator.tsx
+    ./app/page.tsx
+[00:39:46.194] Browser LOG     Probando: https://cobalt.wuk.sh
+[00:39:46.828] Browser WARN    Falló https://cobalt.wuk.sh
+[00:39:46.828] Browser LOG     Probando: https://api.cobalt.tools
+[00:39:47.925] Browser LOG     Probando: https://cobalt.kwiatekmiki.com
+[00:39:48.285] Browser WARN    Falló https://cobalt.kwiatekmiki.com
+[00:39:48.285] Browser ERROR   {}
+[00:42:51.244] Browser LOG     Probando: https://cobalt.wuk.sh
+[00:42:52.225] Browser WARN    Falló https://cobalt.wuk.sh
+[00:42:52.225] Browser LOG     Probando: https://api.cobalt.tools
+[00:42:54.855] Browser LOG     Probando: https://cobalt.kwiatekmiki.com
+[00:42:55.607] Browser WARN    Falló https://cobalt.kwiatekmiki.com
+[00:42:55.607] Browser ERROR   {}
+[00:51:08.969] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:51:11.925] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:51:11.925] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:51:11.925] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765344606730}
+[00:51:18.733] Browser LOG     Probando Cobalt: https://cobalt.wuk.sh
+[00:51:19.202] Browser LOG     Probando Cobalt: https://api.cobalt.tools
+[00:51:20.735] Browser LOG     Probando Cobalt: https://cobalt.kwiatekmiki.com
+[00:51:21.719] Browser LOG     Probando Cobalt: https://cobalt.tools
+[00:51:22.332] Browser LOG     Cobalt falló. Activando RapidAPI...
+[00:51:31.496] Browser LOG     Link final: https://rr5---sn-nx57ynsy.googlevideo.com/videoplayback?expire=1765348214&ei=Fr84ad3-Ne2LsfIPt6-6mAY&ip=50.54.206.29&id=o-AKGsGUmcWxOBVHeO2H6biPTpMXS4Arbyu70XNjYdD1CO&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&cps=0&met=1765326614%2C&mh=MT&mm=31%2C29&mn=sn-nx57ynsy%2Csn-nx57ynze&ms=au%2Crdu&mv=m&mvi=5&pl=19&rms=au%2Cau&initcwndbps=3616250&bui=AYUSA3AwkGOSqSO2wqEnq_obsExau6CbvZyXN51g7JkuB8NgIIdNg22OI-qVr9608wfJuIidejS1Vs3n&spc=wH4Qqz199f4KVvAOy_Vwq2L_XMCvqCyuFIiDsg6SE0kV-JKpQppDF8cqCEy4o_1UGxTtIA&vprv=1&svpuc=1&mime=video%2Fmp4&ns=byw6T7V25paPhZl68onjSZYQ&rqh=1&cnr=14&ratebypass=yes&dur=243.298&lmt=1711153487835893&mt=1765326308&fvip=3&fexp=51552689%2C51565115%2C51565682%2C51580968%2C51669167%2C51673847&c=WEB_EMBEDDED_PLAYER&sefc=1&txp=4538434&n=4RRErzDzo8ii2g&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Ccnr%2Cratebypass%2Cdur%2Clmt&lsparams=cps%2Cmet%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=APaTxxMwRgIhANvLbyM2oPZdKgaNmdf-yflCbc2cCIseQsWL42xDc4uxAiEA3CzToFqtAL0fYL1u7KHFrzN5ox5FZaOzaFfWBkvXOT8%3D&sig=AJfQdSswRgIhAMWOtt2gwwGKoEfCpLCKPw1BrF_MJsjCB-MS-d2xYbfZAiEAlmBiQK17fU9SJj8j4SnuPPkCEcVr4SL1JcGrL7bQTpY%3D
+[00:51:46.650] Browser WARN    Descarga automática falló. Activando manual. {}
+[00:51:46.650] Browser ERROR   {}
+[01:00:30.564] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:00:32.851] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:00:32.851] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:00:32.851] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765345167672}
+[01:00:42.267] Browser LOG     Probando Cobalt: https://cobalt.wuk.sh
+[01:00:43.090] Browser LOG     Probando Cobalt: https://api.cobalt.tools
+[01:00:44.294] Browser LOG     Probando Cobalt: https://cobalt.kwiatekmiki.com
+[01:00:45.169] Browser LOG     Probando Cobalt: https://cobalt.tools
+[01:00:45.690] Browser LOG     Cobalt falló. Activando RapidAPI...
+[01:00:49.361] Browser LOG     Link final: https://rr1---sn-5uaeznss.googlevideo.com/videoplayback?expire=1765348774&ei=RsE4aa7MFcKIy_sPsJiBuQ0&ip=172.124.78.243&id=o-APgRS-sMA_AoB4VEt2HnEoKmWAoudGvdmuuoZC4-eV92&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&met=1765327174%2C&mh=MT&mm=31%2C29&mn=sn-5uaeznss%2Csn-5ualdnss&ms=au%2Crdu&mv=m&mvi=1&pl=21&rms=au%2Cau&initcwndbps=2635000&bui=AYUSA3DSpsCDfWqhcvFfdA3g5n1p2t5nxKMeH4nbDSRlQELTM5TuuVG4d7xJ1Qu9Rq2YVRG5cjYvEmT1&spc=wH4Qq_m5QMVyxmbbCdBSIQaHS5CDHtfrc5sKZhH7JL8LX6nNh1aUv1HFcTJIQObDyu2mvA&vprv=1&svpuc=1&mime=video%2Fmp4&ns=oBruL7Rh_VqJjBHnCUMA44cR&rqh=1&cnr=14&ratebypass=yes&dur=243.298&lmt=1711153487835893&mt=1765326775&fvip=4&fexp=51552689%2C51565115%2C51565682%2C51580968%2C51669167%2C51673847&c=WEB_EMBEDDED_PLAYER&sefc=1&txp=4538434&n=QUATXtJY_sIrZA&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Ccnr%2Cratebypass%2Cdur%2Clmt&lsparams=met%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=APaTxxMwRAIgYabWV_xy2tjh85mW9SlnN3Ib5wUEWGgqqnpqx3ENgjcCIGK7pU1nA-mfTcP5nX8PcSjYvv33qUR2L-yFP73GXl8e&sig=AJfQdSswRQIhAIkQHUDd-fLaLqcSSiQQvvLzsBLmGAjH2EzUY35eInYWAiB9o_pO9ZZu7pJapCF3NEMPXTr3AteAMhaHsIO1hN2Zkw%3D%3D
+[01:00:50.220] Browser WARN    Descarga automática falló. Activando manual. {}
+[01:00:50.220] Browser ERROR   {}
+[01:01:40.589] Server  LOG      ✓ Compiled in 58ms
+[01:01:45.751] Server  LOG      ✓ Compiled in 44ms
+[01:01:48.779] Server  LOG      ✓ Compiled in 49ms
+[01:01:50.149] Server  LOG      ✓ Compiled in 70ms
+[01:01:54.901] Server  LOG      ✓ Compiled in 76ms
+[01:01:57.851] Server  LOG      ✓ Compiled in 85ms
+[01:01:59.257] Server  LOG      ✓ Compiled in 42ms
+[01:02:11.037] Server  LOG      ✓ Compiled in 41ms
+[01:02:14.222] Server  LOG      ✓ Compiled in 40ms
+[01:02:17.231] Server  LOG      ✓ Compiled in 39ms
+[01:02:38.279] Browser LOG     Probando Cobalt: https://cobalt.wuk.sh
+[01:02:38.464] Browser LOG     Probando Cobalt: https://api.cobalt.tools
+[01:02:39.530] Browser LOG     Probando Cobalt: https://cobalt.kwiatekmiki.com
+[01:02:39.832] Browser LOG     Probando Cobalt: https://cobalt.tools
+[01:02:40.025] Browser LOG     Cobalt falló. Activando RapidAPI...
+[01:02:46.812] Browser LOG     Link final: https://rr1---sn-vgqsrnzs.googlevideo.com/videoplayback?expire=1765348891&ei=u8E4aa-jONiGlu8P4ZSL6Q0&ip=2603%3A6010%3A900%3A8b%3A81fe%3Aea0e%3Aae56%3A5a25&id=o-AALnvj9FqsjqZm-WZ2E6cbsFZ88J-nOh2hgM0asU1hWf&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&cps=65&met=1765327291%2C&mh=MT&mm=31%2C29&mn=sn-vgqsrnzs%2Csn-vgqsknzl&ms=au%2Crdu&mv=m&mvi=1&pl=35&rms=au%2Cau&initcwndbps=3578750&bui=AYUSA3AHI7ywwXMOmSo3qA7fSsNdv7JIjdwzSWCfyB0LgcSyRpJar_dX8VqveBqwAJ9oKfdGURMFogAf&spc=wH4QqzQVbG1k5JsgRBIAJqos1jk7NkWSDpxnq3MMEUd1BKJnFHVJ-LQ2_ynSBZLFzwxYXQ&vprv=1&svpuc=1&mime=video%2Fmp4&ns=ocVzQuVpvcHRSnWBYO1pAM4Q&rqh=1&cnr=14&ratebypass=yes&dur=243.298&lmt=1711153487835893&mt=1765327025&fvip=3&fexp=51552689%2C51565115%2C51565682%2C51580968%2C51669167%2C51673847&c=WEB_EMBEDDED_PLAYER&sefc=1&txp=4538434&n=_V0hBAIgC1gSjw&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Ccnr%2Cratebypass%2Cdur%2Clmt&lsparams=cps%2Cmet%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=APaTxxMwRAIgHT3or91x2RsXUos_8e7oWM2bdfrFJdQTNhn1bQn6QQgCICpmCWAOH1mByMaiDZzlsiSLQypzcG_nglmldrG2dolM&sig=AJfQdSswRQIgRDOJS3ttcpTfyOgKN09HUUjKCh9YoNj21u4JPtotvmUCIQD7cS8IxiSBrGiZ_ZefySujdJkt7wwmUaAMLxQCCZhN_g%3D%3D
+[01:02:47.625] Browser WARN    Descarga automática falló. Activando manual. {}
+[01:02:47.625] Browser ERROR   {}
+[01:04:29.422] Server  LOG      ✓ Compiled in 51ms
+[01:04:45.853] Browser LOG     Probando Cobalt: https://cobalt.wuk.sh
+[01:04:46.116] Browser LOG     Probando Cobalt: https://api.cobalt.tools
+[01:04:46.718] Browser LOG     Probando Cobalt: https://cobalt.kwiatekmiki.com
+[01:04:47.005] Browser LOG     Probando Cobalt: https://cobalt.tools
+[01:04:47.322] Browser LOG     Cobalt falló. Activando RapidAPI...
+[01:04:50.293] Browser LOG     Link final: https://rr1---sn-gjo-qj5s.googlevideo.com/videoplayback?expire=1765349015&ei=N8I4abL_LYPOkucPi6j1qQM&ip=199.160.186.86&id=o-APRzGnyaMkPZnjvo09BAwcvnkfH0cfS2lgjgifH2WIzX&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&met=1765327415%2C&mh=MT&mm=31%2C29&mn=sn-gjo-qj5s%2Csn-ab5sznzd&ms=au%2Crdu&mv=u&mvi=1&pl=20&rms=au%2Cau&bui=AYUSA3AkMVhvLVuOoTFSE717aKhyC_r-OpIAWEwzCA7aX5UNtUvvrt6UW4jA8Gu1gpxWMcxWghLY4TCw&spc=wH4Qq2PjeRx1SHSUOxjLy640eELiS5qHMtGBm5VdH7dx8VvppbMKZzhIJKRTaU58yLY2dw&vprv=1&svpuc=1&mime=video%2Fmp4&ns=a7XkMTqap3rjA2VWPTiUKf4Q&rqh=1&cnr=14&ratebypass=yes&dur=243.298&lmt=1711153487835893&mt=1765326037&fvip=2&fexp=51552689%2C51565116%2C51565682%2C51580968%2C51669167%2C51673847&c=WEB_EMBEDDED_PLAYER&sefc=1&txp=4538434&n=yrU3aAYHhRb8Eg&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Ccnr%2Cratebypass%2Cdur%2Clmt&lsparams=met%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms&lsig=APaTxxMwRQIgIwlf2561eNxfymnAg1c07zEMsZZ_8ReK70VFT4Y9cXwCIQDdP0RqqX_PUDnI5uzEHfK309RdE-Pee15GFLuH9QN00Q%3D%3D&sig=AJfQdSswRAIgMGf5bCsMTfJ9z7W37lDjaiUYMRR0CqB3rwAqpGntrhMCIEMmiawis-a93X4-TJ3SPsSlSlCBimja-EO64J_3TlQa
+[01:04:50.830] Browser WARN    Descarga automática falló. Activando modo manual. {}
