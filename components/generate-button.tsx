@@ -3,12 +3,24 @@
 import type React from "react"
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { Sparkles, CheckCircle2, AlertCircle, Video, FileVideo, Share2 } from "lucide-react"
+import { Sparkles, CheckCircle2, AlertCircle, Video, FileVideo, Share2, Mic } from "lucide-react"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import type { BackgroundVideo, VideoFormat } from "@/components/video-generator"
 import type { TextStyle } from "@/components/text-style-selector"
 import { downloadBlob, recordVideoWithTextOverlay, convertWebmToMp4, getAudioDuration } from "@/lib/video-recorder"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Progress } from "@/components/ui/progress"
+
+// Definición de voces disponibles (ID de ElevenLabs)
+const VOICE_OPTIONS = [
+  { id: "onwK4e9ZLuTAKqWW03F9", name: "Daniel (Neutral)" },
+  { id: "21m00Tcm4TlvDq8ikWAM", name: "Rachel (Americana)" },
+  { id: "AZnzlk1XvdvUeBnXmlld", name: "Domi (Fuerte)" },
+  { id: "EXAVITQu4vr4xnSDxMaL", name: "Bella (Suave)" },
+  { id: "ErXwobaYiN019PkySvjV", name: "Antoni (Serio)" },
+  { id: "MF3mGyEYCl7XYWbV9V6O", name: "Elli (Joven)" },
+  { id: "TxGEqnHWrfWFTfGW9XjX", name: "Josh (Profundo)" },
+]
 
 interface GenerateButtonProps {
   script: string
@@ -54,6 +66,9 @@ export function GenerateButton({
   const [showPublishDialog, setShowPublishDialog] = useState(false)
   const [publishProgress, setPublishProgress] = useState(0)
   const [publishStatus, setPublishStatus] = useState<"idle" | "creating" | "uploading" | "success" | "error">("idle")
+  
+  // Estado para la voz seleccionada
+  const [selectedVoiceId, setSelectedVoiceId] = useState("onwK4e9ZLuTAKqWW03F9")
 
   useEffect(() => {
     const loadConnections = () => {
@@ -87,11 +102,12 @@ export function GenerateButton({
     setAudioDuration(null)
 
     try {
-      const response = await fetch("https://api.elevenlabs.io/v1/text-to-speech/onwK4e9ZLuTAKqWW03F9", {
+      // Usamos la voz seleccionada en la URL
+      const response = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${selectedVoiceId}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "xi-api-key": "sk_c1923061c72927db505987c44aa22962022f004deb0eee5c",
+          "xi-api-key": "sk_c1923061c72927db505987c44aa22962022f004deb0eee5c", // Tu API Key
         },
         body: JSON.stringify({
           text: script,
@@ -104,7 +120,7 @@ export function GenerateButton({
       })
 
       if (!response.ok) {
-        throw new Error("Error en la API de ElevenLabs")
+        throw new Error(`Error ElevenLabs: ${response.status}`)
       }
 
       const blob = await response.blob()
@@ -117,7 +133,7 @@ export function GenerateButton({
       setGeneratedAudioUrl(audioUrl)
     } catch (error) {
       console.error("Error generating speech:", error)
-      alert("Error al generar el audio. Verifica tu conexión e intenta de nuevo.")
+      alert("Error al generar el audio. Verifica tu conexión o tu cuota de ElevenLabs.")
     } finally {
       setIsGenerating(false)
     }
@@ -131,7 +147,7 @@ export function GenerateButton({
 
     if (selectedVideo.isYoutube) {
       alert(
-        "Este video de YouTube es solo para vista previa. Por favor descarga el video primero usando el botón 'Descargar y usar' en la pestaña YouTube.",
+        "Este video de YouTube es solo para vista previa. Descárgalo primero.",
       )
       return
     }
@@ -171,7 +187,7 @@ export function GenerateButton({
 
       const timestamp = new Date().toISOString().slice(0, 19).replace(/[:.]/g, "-")
       const extension = mp4Blob.type.includes("mp4") ? "mp4" : "webm"
-      const filename = `reelforge-video-${timestamp}.${extension}`
+      const filename = `video-${timestamp}.${extension}`
 
       downloadBlob(mp4Blob, filename)
 
@@ -189,7 +205,7 @@ export function GenerateButton({
 
   const handlePublish = async () => {
     if (connectedPlatforms.length === 0) {
-      alert("Primero conecta al menos una red social desde el botón 'Conectar Redes' en el encabezado")
+      alert("Primero conecta al menos una red social")
       return
     }
 
@@ -200,13 +216,6 @@ export function GenerateButton({
 
     if (!selectedVideo) {
       alert("No hay un video seleccionado")
-      return
-    }
-
-    if (selectedVideo.isYoutube) {
-      alert(
-        "Este video de YouTube es solo para vista previa. Por favor descarga el video primero usando el botón 'Descargar y usar' en la pestaña YouTube.",
-      )
       return
     }
 
@@ -266,69 +275,92 @@ export function GenerateButton({
 
   return (
     <>
-      <div className="flex flex-col sm:flex-row gap-3">
-        <Button
-          size="lg"
-          className="flex-1 gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
-          disabled={!canGenerate || isGenerating}
-          onClick={handleGenerate}
-        >
-          {isGenerating ? (
-            <>
-              <div className="w-5 h-5 border-2 border-primary-foreground border-t-transparent rounded-full animate-spin" />
-              Generando...
-            </>
-          ) : (
-            <>
-              <Sparkles className="w-5 h-5" />
-              Generar Video
-            </>
-          )}
-        </Button>
+      <div className="flex flex-col gap-4">
+        
+        {/* Selector de Voces */}
+        <div className="flex items-center gap-2">
+            <Select value={selectedVoiceId} onValueChange={setSelectedVoiceId}>
+                <SelectTrigger className="w-full bg-background border-input">
+                    <div className="flex items-center gap-2">
+                        <Mic className="w-4 h-4 text-primary" />
+                        <SelectValue placeholder="Selecciona una voz" />
+                    </div>
+                </SelectTrigger>
+                <SelectContent>
+                    {VOICE_OPTIONS.map((voice) => (
+                        <SelectItem key={voice.id} value={voice.id}>
+                            {voice.name}
+                        </SelectItem>
+                    ))}
+                </SelectContent>
+            </Select>
+        </div>
 
-        <Button
-          size="lg"
-          variant="outline"
-          className={`gap-2 ${
-            connectedPlatforms.length > 0
-              ? "border-green-500 text-green-500 hover:bg-green-500/10"
-              : "border-muted-foreground/30 text-muted-foreground"
-          } bg-transparent`}
-          disabled={isGenerating || !generatedAudioUrl || isPublishing}
-          onClick={handlePublish}
-        >
-          <Share2 className="w-5 h-5" />
-          {connectedPlatforms.length > 0 ? `Publicar (${connectedPlatforms.length})` : "Conecta redes"}
-        </Button>
+        {/* Botones de Acción */}
+        <div className="flex flex-col sm:flex-row gap-3">
+            <Button
+            size="lg"
+            className="flex-1 gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
+            disabled={!canGenerate || isGenerating}
+            onClick={handleGenerate}
+            >
+            {isGenerating ? (
+                <>
+                <div className="w-5 h-5 border-2 border-primary-foreground border-t-transparent rounded-full animate-spin" />
+                Generando...
+                </>
+            ) : (
+                <>
+                <Sparkles className="w-5 h-5" />
+                Generar Video
+                </>
+            )}
+            </Button>
 
-        <Button
-          size="lg"
-          variant="outline"
-          className="gap-2 bg-transparent border-primary/50 hover:bg-primary/10 hover:border-primary"
-          disabled={isGenerating || !generatedAudioUrl || isDownloading}
-          onClick={handleDownload}
-        >
-          {isDownloading ? (
-            <>
-              <div className="w-5 h-5 border-2 border-current border-t-transparent rounded-full animate-spin" />
-              Procesando...
-            </>
-          ) : (
-            <>
-              <FileVideo className="w-5 h-5" />
-              Descargar MP4
-            </>
-          )}
-        </Button>
+            <Button
+            size="lg"
+            variant="outline"
+            className={`gap-2 ${
+                connectedPlatforms.length > 0
+                ? "border-green-500 text-green-500 hover:bg-green-500/10"
+                : "border-muted-foreground/30 text-muted-foreground"
+            } bg-transparent`}
+            disabled={isGenerating || !generatedAudioUrl || isPublishing}
+            onClick={handlePublish}
+            >
+            <Share2 className="w-5 h-5" />
+            {connectedPlatforms.length > 0 ? `Publicar (${connectedPlatforms.length})` : "Conecta redes"}
+            </Button>
+
+            <Button
+            size="lg"
+            variant="outline"
+            className="gap-2 bg-transparent border-primary/50 hover:bg-primary/10 hover:border-primary"
+            disabled={isGenerating || !generatedAudioUrl || isDownloading}
+            onClick={handleDownload}
+            >
+            {isDownloading ? (
+                <>
+                <div className="w-5 h-5 border-2 border-current border-t-transparent rounded-full animate-spin" />
+                Procesando...
+                </>
+            ) : (
+                <>
+                <FileVideo className="w-5 h-5" />
+                Descargar MP4
+                </>
+            )}
+            </Button>
+        </div>
       </div>
 
       {audioDuration && (
         <p className="text-xs text-muted-foreground text-center mt-2">
-          Duración del audio: {Math.round(audioDuration)} segundos - El video se recortará a esta duración
+          Duración: {Math.round(audioDuration)}s
         </p>
       )}
 
-      {/* Dialog de descarga */}
+      {/* Dialogs existentes... */}
       <Dialog open={showDownloadDialog} onOpenChange={setShowDownloadDialog}>
         <DialogContent className="bg-card border-border">
           <DialogHeader>
@@ -414,8 +446,7 @@ export function GenerateButton({
                 </div>
                 <p className="text-sm text-muted-foreground">
                   Tu video ha sido enviado a {connectedPlatforms.length}{" "}
-                  {connectedPlatforms.length === 1 ? "plataforma" : "plataformas"}. Puede tardar unos minutos en
-                  aparecer.
+                  {connectedPlatforms.length === 1 ? "plataforma" : "plataformas"}.
                 </p>
                 <Button onClick={() => setShowPublishDialog(false)}>Cerrar</Button>
               </div>

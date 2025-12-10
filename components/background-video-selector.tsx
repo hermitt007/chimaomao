@@ -13,7 +13,7 @@ import { Progress } from "@/components/ui/progress"
 import type { BackgroundVideo } from "@/components/video-generator"
 
 // =====================================================================
-// 1. CONFIGURACIÓN DE MOTORES
+// 1. CONFIGURACIÓN
 // =====================================================================
 
 // Instancias de Cobalt (Gratis)
@@ -21,14 +21,13 @@ const COBALT_INSTANCES = [
   "https://cobalt.wuk.sh",
   "https://api.cobalt.tools",
   "https://cobalt.kwiatekmiki.com",
-  "https://cobalt.tools"
 ];
 
-// Tu RapidAPI (Respaldo Infalible)
+// Tu RapidAPI (Respaldo)
 const RAPID_API_KEY = '1044ee640amsh8bad42eaa4d1d8dp126afbjsn76e10ace99b1';
 const RAPID_API_HOST = 'youtube-media-downloader.p.rapidapi.com';
 
-// Proxy para evitar bloqueo del navegador (CORS)
+// Proxy CORS
 const CORS_PROXY = "https://corsproxy.io/?";
 
 interface BackgroundVideoSelectorProps {
@@ -38,21 +37,24 @@ interface BackgroundVideoSelectorProps {
 
 const categories = ["Custom", "Satisfactorio", "Subway S.", "Minecraft", "GTA"]
 
+// =====================================================================
+// 2. VIDEOS DE EJEMPLO
+// =====================================================================
 const backgroundVideos: BackgroundVideo[] = [
   {
     id: "mc1", category: "Minecraft", title: "Minecraft Parkour",
-    thumbnail: "https://img.youtube.com/vi/aZ3f_Xj6VQM/hqdefault.jpg",
-    videoUrl: "https://www.youtube.com/watch?v=85z7jqGAGcc", isYoutube: true, youtubeId: "aZ3f_Xj6VQM"
+    thumbnail: "https://i.ytimg.com/vi/075J5107e9Y/hqdefault.jpg",
+    videoUrl: "https://www.youtube.com/watch?v=075J5107e9Y", isYoutube: true, youtubeId: "075J5107e9Y"
   },
   {
-    id: "ss1", category: "Subway S.", title: "Subway Surfers",
-    thumbnail: "https://img.youtube.com/vi/XYqOrsmEDtE/hqdefault.jpg",
-    videoUrl: "https://www.youtube.com/watch?v=vTfD20dbxho", isYoutube: true, youtubeId: "XYqOrsmEDtE"
+    id: "ss1", category: "Subway S.", title: "Subway Surfers Gameplay",
+    thumbnail: "https://i.ytimg.com/vi/hs7Z0JUgDeA/hqdefault.jpg",
+    videoUrl: "https://www.youtube.com/watch?v=hs7Z0JUgDeA", isYoutube: true, youtubeId: "hs7Z0JUgDeA"
   },
   {
-    id: "gta1", category: "GTA", title: "GTA V Stunts",
-    thumbnail: "https://img.youtube.com/vi/K5J_iXw8gwc/hqdefault.jpg",
-    videoUrl: "https://www.youtube.com/watch?v=xv3wFGGeIsI", isYoutube: true, youtubeId: "K5J_iXw8gwc"
+    id: "gta1", category: "GTA", title: "GTA V Ramp Stunts",
+    thumbnail: "https://i.ytimg.com/vi/NfJ5r5Fj80o/hqdefault.jpg",
+    videoUrl: "https://www.youtube.com/watch?v=NfJ5r5Fj80o", isYoutube: true, youtubeId: "NfJ5r5Fj80o"
   }
 ]
 
@@ -71,7 +73,10 @@ export function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }: Bac
   
   // Datos temporales
   const [previewInfo, setPreviewInfo] = useState<any>(null)
+  
+  // Estado para el fallback manual
   const [manualLink, setManualLink] = useState<string | null>(null)
+  const [isApiLimitError, setIsApiLimitError] = useState(false)
 
   const filteredVideos =
     activeCategory === "Custom" ? customVideos : backgroundVideos.filter((v) => v.category === activeCategory)
@@ -89,14 +94,15 @@ export function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }: Bac
     
     setPreviewInfo({
         title: "Video detectado",
-        thumbnail: `https://img.youtube.com/vi/${id}/hqdefault.jpg`,
+        thumbnail: `https://i.ytimg.com/vi/${id}/hqdefault.jpg`,
         videoId: id
     });
     setErrorMsg("");
     setManualLink(null);
+    setIsApiLimitError(false);
   }
 
-  // --- 2. MOTOR DE DESCARGA MAESTRO ---
+  // --- 2. MOTOR DE DESCARGA ---
   const handleDownload = async (urlOverride?: string, infoOverride?: any) => {
     const targetUrl = urlOverride || youtubeUrl;
     const targetInfo = infoOverride || previewInfo;
@@ -108,28 +114,24 @@ export function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }: Bac
     setProgress(10);
     setErrorMsg("");
     setManualLink(null);
-    setStatusMsg("Iniciando motores...");
+    setIsApiLimitError(false);
+    setStatusMsg("Iniciando descarga...");
     
-    // Progreso falso visual
     const interval = setInterval(() => setProgress(p => (p < 90 ? p + 2 : p)), 200);
 
     try {
       let downloadLink = "";
 
-      // ==========================================
-      // INTENTO A: COBALT (Gratis)
-      // ==========================================
+      // --- INTENTO A: COBALT (Gratis) ---
       for (const instance of COBALT_INSTANCES) {
           try {
               console.log(`Probando Cobalt: ${instance}`);
-              // Intento v10
               let res = await fetch(`${instance}/`, {
                   method: "POST",
                   headers: { "Accept": "application/json", "Content-Type": "application/json" },
                   body: JSON.stringify({ url: targetUrl, vQuality: "720", filenamePattern: "basic" })
               });
 
-              // Intento v7 fallback
               if (res.status === 404) {
                   res = await fetch(`${instance}/api/json`, {
                       method: "POST",
@@ -140,23 +142,14 @@ export function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }: Bac
 
               const data = await res.json();
               const link = data.url || data.picker?.[0]?.url || data.audio;
-              
-              if (link) {
-                  downloadLink = link;
-                  console.log("¡Cobalt funcionó!");
-                  break; 
-              }
-          } catch (e) {
-              // Falló esta instancia, probamos la siguiente
-          }
+              if (link) { downloadLink = link; break; }
+          } catch (e) { }
       }
 
-      // ==========================================
-      // INTENTO B: RAPIDAPI (Respaldo)
-      // ==========================================
+      // --- INTENTO B: RAPIDAPI (Tu Clave) ---
       if (!downloadLink) {
-          console.log("Cobalt falló. Activando RapidAPI...");
-          setStatusMsg("Usando RapidAPI...");
+          console.log("Cobalt falló. Probando tu API...");
+          setStatusMsg("Usando tu API...");
           
           const apiUrl = `https://${RAPID_API_HOST}/v2/video/details?videoId=${videoId}`;
           const apiRes = await fetch(apiUrl, {
@@ -167,68 +160,56 @@ export function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }: Bac
             }
           });
 
+          // CORRECCIÓN CLAVE: Si la API da 429, activamos manual inmediatamente
+          if (apiRes.status === 429) {
+              setIsApiLimitError(true);
+              // Ponemos una web externa genérica porque no pudimos sacar el link directo
+              setManualLink("https://cobalt.tools"); 
+              throw new Error("Cuota agotada. Usa la opción manual.");
+          }
+
           if (apiRes.ok) {
               const data = await apiRes.json();
-              // Buscar mejor calidad MP4
               if (data.videos?.items) {
                   const best = data.videos.items.find((v: any) => v.quality === '720p' && v.extension === 'mp4') 
-                            || data.videos.items.find((v: any) => v.extension === 'mp4')
                             || data.videos.items[0];
                   downloadLink = best?.url;
               }
           }
       }
 
+      // Si después de todo no hay link, activamos fallback a web externa
       if (!downloadLink) {
-          throw new Error("No se pudo obtener el enlace de descarga.");
+          setManualLink("https://cobalt.tools"); 
+          throw new Error("No se pudo obtener enlace automático.");
       }
 
-      console.log("Link final:", downloadLink);
-      setStatusMsg("Descargando archivo...");
+      console.log("Link encontrado:", downloadLink);
+      setStatusMsg("Guardando archivo...");
       setProgress(60);
 
-      // ==========================================
-// FASE FINAL: DESCARGA VIA BACKEND (SIN CORS)
-try {
-    setStatusMsg("Descargando desde servidor seguro...");
+      // --- FASE FINAL: DESCARGA AL NAVEGADOR ---
+      try {
+          const safeLink = CORS_PROXY + encodeURIComponent(downloadLink);
+          const fileRes = await fetch(safeLink);
+          
+          if (!fileRes.ok) throw new Error("Bloqueo de red");
+          
+          const blob = await fileRes.blob();
+          const localUrl = URL.createObjectURL(blob);
+          
+          saveVideoToApp(localUrl, targetInfo);
 
-    const fileRes = await fetch("/api/youtube/download/route.ts", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ url: downloadLink })
-    });
-
-    if (!fileRes.ok) throw new Error("Error en el servidor al bajar el archivo");
-
-    const blob = await fileRes.blob();
-    const localUrl = URL.createObjectURL(blob);
-
-    // Guardamos el video en la app
-    saveVideoToApp(localUrl, targetInfo);
-
-} catch (fetchError: any) {
-    console.warn("Descarga automática falló. Activando modo manual.", fetchError);
-
-    // Activa modo manual
-    setManualLink(downloadLink);
-
-    // NO lanzar error que detona en consola
-    setErrorMsg("La descarga automática falló. Usa el modo manual.");
-
-    // Detener spinner y barra de progreso
-    setLoading(false);
-    setProgress(0);
-
-    // Corta aquí sin romper React
-    return;
-}
-
-
+      } catch (fetchError) {
+          // Si tenemos el link pero falla la descarga (CORS), damos el link al usuario
+          setManualLink(downloadLink); 
+          throw new Error("Descarga automática bloqueada por el navegador.");
+      }
 
     } catch (err: any) {
       console.error(err);
-      setErrorMsg(err.message || "Error desconocido");
-      if (!manualLink) setProgress(0);
+      // Si ya activamos el link manual, no mostramos error rojo
+      if (!manualLink) setErrorMsg(err.message || "Error desconocido");
     } finally {
       clearInterval(interval);
       setLoading(false);
@@ -330,21 +311,26 @@ try {
                              </div>
                         )}
 
-                        {/* PLAN DE EMERGENCIA: DESCARGA MANUAL */}
+                        {/* === ZONA DE EMERGENCIA MANUAL === */}
                         {manualLink && (
-                            <div className="p-3 bg-yellow-500/10 border border-yellow-500/30 rounded-lg space-y-2 mt-2">
+                            <div className="p-3 bg-yellow-500/10 border border-yellow-500/30 rounded-lg space-y-2 mt-2 animate-in slide-in-from-top-2">
                                 <div className="flex items-center gap-2 text-yellow-600 text-sm font-medium">
-                                    <AlertCircle className="w-4 h-4"/> Descarga automática bloqueada
+                                    <AlertCircle className="w-4 h-4"/>
+                                    {isApiLimitError ? "Tu API se agotó (429)" : "Descarga automática bloqueada"}
                                 </div>
-                                <p className="text-xs text-muted-foreground">Tu navegador bloqueó la conexión. Hazlo en 2 pasos:</p>
+                                <p className="text-xs text-muted-foreground">
+                                    {isApiLimitError 
+                                        ? "Has superado el límite de la clave RapidAPI. Usa esta web gratuita:" 
+                                        : "El navegador no permitió la descarga directa. Hazlo manualmente:"}
+                                </p>
                                 <div className="grid grid-cols-2 gap-2">
                                     <Button size="sm" variant="outline" className="text-xs" 
                                         onClick={() => window.open(manualLink, '_blank')}>
-                                        <ExternalLink className="w-3 h-3 mr-2"/> 1. Bajar Video
+                                        <ExternalLink className="w-3 h-3 mr-2"/> 1. Ir a Descargar
                                     </Button>
                                     <Button size="sm" className="text-xs" 
                                         onClick={() => fileInputRef.current?.click()}>
-                                        <Upload className="w-3 h-3 mr-2"/> 2. Subirlo aquí
+                                        <Upload className="w-3 h-3 mr-2"/> 2. Subir Archivo
                                     </Button>
                                 </div>
                             </div>
