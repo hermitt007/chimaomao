@@ -42,17 +42,17 @@ const backgroundVideos: BackgroundVideo[] = [
   {
     id: "mc1", category: "Minecraft", title: "Minecraft Parkour",
     thumbnail: "https://img.youtube.com/vi/aZ3f_Xj6VQM/hqdefault.jpg",
-    videoUrl: "https://www.youtube.com/watch?v=aZ3f_Xj6VQM", isYoutube: true, youtubeId: "aZ3f_Xj6VQM"
+    videoUrl: "https://www.youtube.com/watch?v=85z7jqGAGcc", isYoutube: true, youtubeId: "aZ3f_Xj6VQM"
   },
   {
     id: "ss1", category: "Subway S.", title: "Subway Surfers",
     thumbnail: "https://img.youtube.com/vi/XYqOrsmEDtE/hqdefault.jpg",
-    videoUrl: "https://www.youtube.com/watch?v=XYqOrsmEDtE", isYoutube: true, youtubeId: "XYqOrsmEDtE"
+    videoUrl: "https://www.youtube.com/watch?v=vTfD20dbxho", isYoutube: true, youtubeId: "XYqOrsmEDtE"
   },
   {
     id: "gta1", category: "GTA", title: "GTA V Stunts",
     thumbnail: "https://img.youtube.com/vi/K5J_iXw8gwc/hqdefault.jpg",
-    videoUrl: "https://www.youtube.com/watch?v=K5J_iXw8gwc", isYoutube: true, youtubeId: "K5J_iXw8gwc"
+    videoUrl: "https://www.youtube.com/watch?v=xv3wFGGeIsI", isYoutube: true, youtubeId: "K5J_iXw8gwc"
   }
 ]
 
