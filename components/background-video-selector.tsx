@@ -49,7 +49,7 @@ const backgroundVideos: BackgroundVideo[] = [
     // Usa una captura del video o un placeholder si no tienes imagen
     thumbnail: "/placeholder.svg", 
     // Ruta relativa a la carpeta public
-    videoUrl: "/videos/Minecraft Parkour 7 Minutes Free To Use Gameplay No Copyright 2023 60 FPS.mp4", 
+    videoUrl: "/videos/Parkour 3.mp4", 
     isYoutube: false // ¡Importante! Ya no es YouTube
   },
   {
@@ -57,7 +57,7 @@ const backgroundVideos: BackgroundVideo[] = [
     category: "Minecraft", 
     title: "Parkour Rápido",
     thumbnail: "/placeholder.svg", 
-    videoUrl: "/videos/Parkour 2.mp4", 
+    videoUrl: "/videos/Parkour 3.mp4", 
     isYoutube: false
   },
   {
