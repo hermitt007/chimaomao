@@ -1135,7 +1135,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$scroll$2
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/input.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/button.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/utils.ts [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$check$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Check$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/check.js [app-ssr] (ecmascript) <export default as Check>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$play$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Play$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/play.js [app-ssr] (ecmascript) <export default as Play>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Link$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/link.js [app-ssr] (ecmascript) <export default as Link>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$upload$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Upload$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/upload.js [app-ssr] (ecmascript) <export default as Upload>");
@@ -1144,6 +1143,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$download$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Download$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/download.js [app-ssr] (ecmascript) <export default as Download>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$alert$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__AlertCircle$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/circle-alert.js [app-ssr] (ecmascript) <export default as AlertCircle>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$external$2d$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ExternalLink$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/external-link.js [app-ssr] (ecmascript) <export default as ExternalLink>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$video$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Video$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/video.js [app-ssr] (ecmascript) <export default as Video>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/tabs.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$progress$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/progress.tsx [app-ssr] (ecmascript)");
 "use client";
@@ -1179,35 +1179,75 @@ const categories = [
     "GTA"
 ];
 // =====================================================================
-// 2. VIDEOS DE EJEMPLO
+// 2. TUS VIDEOS LOCALES (Ya descargados)
 // =====================================================================
+// Asegúrate de que los nombres de archivo coincidan EXACTAMENTE con los que subiste a public/videos/
 const backgroundVideos = [
     {
         id: "mc1",
         category: "Minecraft",
         title: "Minecraft Parkour",
-        thumbnail: "https://i.ytimg.com/vi/075J5107e9Y/hqdefault.jpg",
-        videoUrl: "https://www.youtube.com/watch?v=075J5107e9Y",
-        isYoutube: true,
-        youtubeId: "075J5107e9Y"
+        // Usa una captura del video o un placeholder si no tienes imagen
+        thumbnail: "/placeholder.svg",
+        // Ruta relativa a la carpeta public
+        videoUrl: "/videos/Minecraft Parkour 7 Minutes Free To Use Gameplay No Copyright 2023 60 FPS.mp4",
+        isYoutube: false // ¡Importante! Ya no es YouTube
+    },
+    {
+        id: "mc2",
+        category: "Minecraft",
+        title: "Parkour Rápido",
+        thumbnail: "/placeholder.svg",
+        videoUrl: "/videos/Parkour 2.mp4",
+        isYoutube: false
+    },
+    {
+        id: "mc3",
+        category: "Minecraft",
+        title: "Parkour Extremo",
+        thumbnail: "/placeholder.svg",
+        videoUrl: "/videos/Parkour 3.mp4",
+        isYoutube: false
     },
     {
         id: "ss1",
         category: "Subway S.",
-        title: "Subway Surfers Gameplay",
-        thumbnail: "https://i.ytimg.com/vi/hs7Z0JUgDeA/hqdefault.jpg",
-        videoUrl: "https://www.youtube.com/watch?v=hs7Z0JUgDeA",
-        isYoutube: true,
-        youtubeId: "hs7Z0JUgDeA"
+        title: "Subway Run 1",
+        thumbnail: "/placeholder.svg",
+        videoUrl: "/videos/run 1.mp4",
+        isYoutube: false
+    },
+    {
+        id: "ss2",
+        category: "Subway S.",
+        title: "Subway Run 2",
+        thumbnail: "/placeholder.svg",
+        videoUrl: "/videos/run 2.mp4",
+        isYoutube: false
+    },
+    {
+        id: "ss3",
+        category: "Subway S.",
+        title: "Subway Run 3",
+        thumbnail: "/placeholder.svg",
+        videoUrl: "/videos/run 3.mp4",
+        isYoutube: false
     },
     {
         id: "gta1",
         category: "GTA",
-        title: "GTA V Ramp Stunts",
-        thumbnail: "https://i.ytimg.com/vi/NfJ5r5Fj80o/hqdefault.jpg",
-        videoUrl: "https://www.youtube.com/watch?v=NfJ5r5Fj80o",
-        isYoutube: true,
-        youtubeId: "NfJ5r5Fj80o"
+        title: "GTA V Stunts",
+        thumbnail: "/placeholder.svg",
+        videoUrl: "/videos/gta 2.mp4",
+        isYoutube: false
+    },
+    {
+        id: "sat1",
+        category: "Satisfactorio",
+        title: "Satisfying Loop",
+        thumbnail: "/placeholder.svg",
+        videoUrl: "/videos/satisfactory.mp4",
+        isYoutube: false
     }
 ];
 function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }) {
@@ -1223,7 +1263,6 @@ function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }) {
     const [errorMsg, setErrorMsg] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
     // Datos temporales
     const [previewInfo, setPreviewInfo] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
-    // Estado para el fallback manual
     const [manualLink, setManualLink] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
     const [isApiLimitError, setIsApiLimitError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     const filteredVideos = activeCategory === "Custom" ? customVideos : backgroundVideos.filter((v)=>v.category === activeCategory);
@@ -1248,7 +1287,7 @@ function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }) {
         setManualLink(null);
         setIsApiLimitError(false);
     };
-    // --- 2. MOTOR DE DESCARGA ---
+    // --- 2. MOTOR DE DESCARGA (Solo para URLs nuevas que pegue el usuario) ---
     const handleDownload = async (urlOverride, infoOverride)=>{
         const targetUrl = urlOverride || youtubeUrl;
         const targetInfo = infoOverride || previewInfo;
@@ -1263,10 +1302,9 @@ function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }) {
         const interval = setInterval(()=>setProgress((p)=>p < 90 ? p + 2 : p), 200);
         try {
             let downloadLink = "";
-            // --- INTENTO A: COBALT (Gratis) ---
+            // --- INTENTO A: COBALT ---
             for (const instance of COBALT_INSTANCES){
                 try {
-                    console.log(`Probando Cobalt: ${instance}`);
                     let res = await fetch(`${instance}/`, {
                         method: "POST",
                         headers: {
@@ -1300,10 +1338,8 @@ function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }) {
                     }
                 } catch (e) {}
             }
-            // --- INTENTO B: RAPIDAPI (Tu Clave) ---
+            // --- INTENTO B: RAPIDAPI ---
             if (!downloadLink) {
-                console.log("Cobalt falló. Probando tu API...");
-                setStatusMsg("Usando tu API...");
                 const apiUrl = `https://${RAPID_API_HOST}/v2/video/details?videoId=${videoId}`;
                 const apiRes = await fetch(apiUrl, {
                     method: 'GET',
@@ -1312,22 +1348,19 @@ function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }) {
                         'x-rapidapi-host': RAPID_API_HOST
                     }
                 });
-                // CORRECCIÓN CLAVE: Si la API da 429, activamos manual inmediatamente
                 if (apiRes.status === 429) {
                     setIsApiLimitError(true);
-                    // Ponemos una web externa genérica porque no pudimos sacar el link directo
                     setManualLink("https://cobalt.tools");
                     throw new Error("Cuota agotada. Usa la opción manual.");
                 }
                 if (apiRes.ok) {
                     const data = await apiRes.json();
                     if (data.videos?.items) {
-                        const best = data.videos.items.find((v)=>v.quality === '720p' && v.extension === 'mp4') || data.videos.items[0];
+                        const best = data.videos.items.find((v)=>v.quality === '720p' && v.extension === 'mp4') || data.videos.items.find((v)=>v.extension === 'mp4') || data.videos.items[0];
                         downloadLink = best?.url;
                     }
                 }
             }
-            // Si después de todo no hay link, activamos fallback a web externa
             if (!downloadLink) {
                 setManualLink("https://cobalt.tools");
                 throw new Error("No se pudo obtener enlace automático.");
@@ -1335,7 +1368,6 @@ function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }) {
             console.log("Link encontrado:", downloadLink);
             setStatusMsg("Guardando archivo...");
             setProgress(60);
-            // --- FASE FINAL: DESCARGA AL NAVEGADOR ---
             try {
                 const safeLink = CORS_PROXY + encodeURIComponent(downloadLink);
                 const fileRes = await fetch(safeLink);
@@ -1344,13 +1376,11 @@ function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }) {
                 const localUrl = URL.createObjectURL(blob);
                 saveVideoToApp(localUrl, targetInfo);
             } catch (fetchError) {
-                // Si tenemos el link pero falla la descarga (CORS), damos el link al usuario
                 setManualLink(downloadLink);
                 throw new Error("Descarga automática bloqueada por el navegador.");
             }
         } catch (err) {
             console.error(err);
-            // Si ya activamos el link manual, no mostramos error rojo
             if (!manualLink) setErrorMsg(err.message || "Error desconocido");
         } finally{
             clearInterval(interval);
@@ -1426,12 +1456,12 @@ function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }) {
                     children: "Seleccionar Video de Fondo"
                 }, void 0, false, {
                     fileName: "[project]/components/background-video-selector.tsx",
-                    lineNumber: 254,
+                    lineNumber: 295,
                     columnNumber: 36
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/background-video-selector.tsx",
-                lineNumber: 254,
+                lineNumber: 295,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -1450,7 +1480,7 @@ function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }) {
                                                 className: "w-4 h-4"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/background-video-selector.tsx",
-                                                lineNumber: 264,
+                                                lineNumber: 305,
                                                 columnNumber: 38
                                             }, this),
                                             " ",
@@ -1458,25 +1488,25 @@ function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }) {
                                         ]
                                     }, cat, true, {
                                         fileName: "[project]/components/background-video-selector.tsx",
-                                        lineNumber: 260,
+                                        lineNumber: 301,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/components/background-video-selector.tsx",
-                                lineNumber: 258,
+                                lineNumber: 299,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$scroll$2d$area$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ScrollBar"], {
                                 orientation: "horizontal"
                             }, void 0, false, {
                                 fileName: "[project]/components/background-video-selector.tsx",
-                                lineNumber: 268,
+                                lineNumber: 309,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/background-video-selector.tsx",
-                        lineNumber: 257,
+                        lineNumber: 298,
                         columnNumber: 9
                     }, this),
                     activeCategory === "Custom" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1494,14 +1524,14 @@ function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }) {
                                                     className: "w-4 h-4 mr-2"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/background-video-selector.tsx",
-                                                    lineNumber: 275,
+                                                    lineNumber: 316,
                                                     columnNumber: 54
                                                 }, this),
                                                 " YouTube"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/background-video-selector.tsx",
-                                            lineNumber: 275,
+                                            lineNumber: 316,
                                             columnNumber: 25
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TabsTrigger"], {
@@ -1511,14 +1541,14 @@ function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }) {
                                                     className: "w-4 h-4 mr-2"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/background-video-selector.tsx",
-                                                    lineNumber: 276,
+                                                    lineNumber: 317,
                                                     columnNumber: 53
                                                 }, this),
                                                 " Subir"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/background-video-selector.tsx",
-                                            lineNumber: 276,
+                                            lineNumber: 317,
                                             columnNumber: 25
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TabsTrigger"], {
@@ -1528,20 +1558,20 @@ function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }) {
                                                     className: "w-4 h-4 mr-2"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/background-video-selector.tsx",
-                                                    lineNumber: 277,
+                                                    lineNumber: 318,
                                                     columnNumber: 50
                                                 }, this),
                                                 " URL"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/background-video-selector.tsx",
-                                            lineNumber: 277,
+                                            lineNumber: 318,
                                             columnNumber: 25
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/background-video-selector.tsx",
-                                    lineNumber: 274,
+                                    lineNumber: 315,
                                     columnNumber: 21
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TabsContent"], {
@@ -1561,7 +1591,7 @@ function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }) {
                                                     disabled: loading
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/background-video-selector.tsx",
-                                                    lineNumber: 282,
+                                                    lineNumber: 323,
                                                     columnNumber: 29
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -1571,18 +1601,18 @@ function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }) {
                                                         className: "w-4 h-4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/background-video-selector.tsx",
-                                                        lineNumber: 288,
+                                                        lineNumber: 329,
                                                         columnNumber: 80
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/background-video-selector.tsx",
-                                                    lineNumber: 288,
+                                                    lineNumber: 329,
                                                     columnNumber: 29
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/background-video-selector.tsx",
-                                            lineNumber: 281,
+                                            lineNumber: 322,
                                             columnNumber: 25
                                         }, this),
                                         previewInfo && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1596,7 +1626,7 @@ function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }) {
                                                             className: "w-24 h-16 object-cover rounded"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/background-video-selector.tsx",
-                                                            lineNumber: 294,
+                                                            lineNumber: 335,
                                                             columnNumber: 37
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1606,7 +1636,7 @@ function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }) {
                                                                     children: previewInfo.title
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/background-video-selector.tsx",
-                                                                    lineNumber: 296,
+                                                                    lineNumber: 337,
                                                                     columnNumber: 41
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1617,19 +1647,19 @@ function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }) {
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/components/background-video-selector.tsx",
-                                                                    lineNumber: 297,
+                                                                    lineNumber: 338,
                                                                     columnNumber: 41
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/components/background-video-selector.tsx",
-                                                            lineNumber: 295,
+                                                            lineNumber: 336,
                                                             columnNumber: 37
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/background-video-selector.tsx",
-                                                    lineNumber: 293,
+                                                    lineNumber: 334,
                                                     columnNumber: 33
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -1641,26 +1671,26 @@ function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }) {
                                                             className: "animate-spin w-4 h-4"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/background-video-selector.tsx",
-                                                            lineNumber: 301,
+                                                            lineNumber: 342,
                                                             columnNumber: 48
                                                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$download$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Download$3e$__["Download"], {
                                                             className: "w-4 h-4"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/background-video-selector.tsx",
-                                                            lineNumber: 301,
+                                                            lineNumber: 342,
                                                             columnNumber: 94
                                                         }, this),
                                                         "Descargar y Usar"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/background-video-selector.tsx",
-                                                    lineNumber: 300,
+                                                    lineNumber: 341,
                                                     columnNumber: 33
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/background-video-selector.tsx",
-                                            lineNumber: 292,
+                                            lineNumber: 333,
                                             columnNumber: 29
                                         }, this),
                                         loading && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1673,7 +1703,7 @@ function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }) {
                                                             children: statusMsg
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/background-video-selector.tsx",
-                                                            lineNumber: 309,
+                                                            lineNumber: 350,
                                                             columnNumber: 79
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1683,13 +1713,13 @@ function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }) {
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/components/background-video-selector.tsx",
-                                                            lineNumber: 309,
+                                                            lineNumber: 350,
                                                             columnNumber: 103
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/background-video-selector.tsx",
-                                                    lineNumber: 309,
+                                                    lineNumber: 350,
                                                     columnNumber: 33
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$progress$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Progress"], {
@@ -1697,13 +1727,13 @@ function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }) {
                                                     className: "h-2"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/background-video-selector.tsx",
-                                                    lineNumber: 310,
+                                                    lineNumber: 351,
                                                     columnNumber: 33
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/background-video-selector.tsx",
-                                            lineNumber: 308,
+                                            lineNumber: 349,
                                             columnNumber: 30
                                         }, this),
                                         manualLink && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1716,22 +1746,14 @@ function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }) {
                                                             className: "w-4 h-4"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/background-video-selector.tsx",
-                                                            lineNumber: 318,
+                                                            lineNumber: 358,
                                                             columnNumber: 37
                                                         }, this),
                                                         isApiLimitError ? "Tu API se agotó (429)" : "Descarga automática bloqueada"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/background-video-selector.tsx",
-                                                    lineNumber: 317,
-                                                    columnNumber: 33
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                    className: "text-xs text-muted-foreground",
-                                                    children: isApiLimitError ? "Has superado el límite de la clave RapidAPI. Usa esta web gratuita:" : "El navegador no permitió la descarga directa. Hazlo manualmente:"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/components/background-video-selector.tsx",
-                                                    lineNumber: 321,
+                                                    lineNumber: 357,
                                                     columnNumber: 33
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1747,14 +1769,14 @@ function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }) {
                                                                     className: "w-3 h-3 mr-2"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/background-video-selector.tsx",
-                                                                    lineNumber: 329,
+                                                                    lineNumber: 364,
                                                                     columnNumber: 41
                                                                 }, this),
                                                                 " 1. Ir a Descargar"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/components/background-video-selector.tsx",
-                                                            lineNumber: 327,
+                                                            lineNumber: 362,
                                                             columnNumber: 37
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -1766,26 +1788,26 @@ function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }) {
                                                                     className: "w-3 h-3 mr-2"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/background-video-selector.tsx",
-                                                                    lineNumber: 333,
+                                                                    lineNumber: 368,
                                                                     columnNumber: 41
                                                                 }, this),
                                                                 " 2. Subir Archivo"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/components/background-video-selector.tsx",
-                                                            lineNumber: 331,
+                                                            lineNumber: 366,
                                                             columnNumber: 37
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/background-video-selector.tsx",
-                                                    lineNumber: 326,
+                                                    lineNumber: 361,
                                                     columnNumber: 33
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/background-video-selector.tsx",
-                                            lineNumber: 316,
+                                            lineNumber: 356,
                                             columnNumber: 29
                                         }, this),
                                         errorMsg && !manualLink && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1795,7 +1817,7 @@ function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }) {
                                                     className: "w-4 h-4"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/background-video-selector.tsx",
-                                                    lineNumber: 341,
+                                                    lineNumber: 376,
                                                     columnNumber: 33
                                                 }, this),
                                                 " ",
@@ -1803,13 +1825,13 @@ function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }) {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/background-video-selector.tsx",
-                                            lineNumber: 340,
+                                            lineNumber: 375,
                                             columnNumber: 29
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/background-video-selector.tsx",
-                                    lineNumber: 280,
+                                    lineNumber: 321,
                                     columnNumber: 21
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TabsContent"], {
@@ -1824,7 +1846,7 @@ function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }) {
                                             className: "hidden"
                                         }, void 0, false, {
                                             fileName: "[project]/components/background-video-selector.tsx",
-                                            lineNumber: 347,
+                                            lineNumber: 382,
                                             columnNumber: 25
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -1834,13 +1856,13 @@ function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }) {
                                             children: "Seleccionar archivo local"
                                         }, void 0, false, {
                                             fileName: "[project]/components/background-video-selector.tsx",
-                                            lineNumber: 348,
+                                            lineNumber: 383,
                                             columnNumber: 25
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/background-video-selector.tsx",
-                                    lineNumber: 346,
+                                    lineNumber: 381,
                                     columnNumber: 21
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TabsContent"], {
@@ -1853,7 +1875,7 @@ function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }) {
                                             placeholder: "https://..."
                                         }, void 0, false, {
                                             fileName: "[project]/components/background-video-selector.tsx",
-                                            lineNumber: 351,
+                                            lineNumber: 386,
                                             columnNumber: 25
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -1861,24 +1883,24 @@ function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }) {
                                             children: "Agregar"
                                         }, void 0, false, {
                                             fileName: "[project]/components/background-video-selector.tsx",
-                                            lineNumber: 352,
+                                            lineNumber: 387,
                                             columnNumber: 25
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/background-video-selector.tsx",
-                                    lineNumber: 350,
+                                    lineNumber: 385,
                                     columnNumber: 21
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/background-video-selector.tsx",
-                            lineNumber: 273,
+                            lineNumber: 314,
                             columnNumber: 17
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/background-video-selector.tsx",
-                        lineNumber: 272,
+                        lineNumber: 313,
                         columnNumber: 13
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$scroll$2d$area$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ScrollArea"], {
@@ -1888,6 +1910,8 @@ function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }) {
                                 children: filteredVideos.map((video)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("relative w-[100px] aspect-[9/16] rounded-lg overflow-hidden cursor-pointer flex-shrink-0 bg-black", selectedVideo?.id === video.id ? "ring-2 ring-primary" : "hover:opacity-80"),
                                         onClick: ()=>{
+                                            // Al hacer clic en un video local, lo seleccionamos directamente
+                                            // ya no intentamos descargar porque YA lo tienes
                                             if (video.isYoutube && !activeCategory.includes("Custom")) {
                                                 handleDownload(video.videoUrl, video);
                                             } else {
@@ -1895,13 +1919,20 @@ function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }) {
                                             }
                                         },
                                         children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                            video.videoUrl.endsWith('.mp4') ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("video", {
+                                                src: video.videoUrl,
+                                                className: "w-full h-full object-cover opacity-70 pointer-events-none"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/background-video-selector.tsx",
+                                                lineNumber: 412,
+                                                columnNumber: 29
+                                            }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                                 src: video.thumbnail,
                                                 className: "w-full h-full object-cover opacity-70"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/background-video-selector.tsx",
-                                                lineNumber: 373,
-                                                columnNumber: 25
+                                                lineNumber: 414,
+                                                columnNumber: 29
                                             }, this),
                                             loading && (selectedVideo?.id === video.id || youtubeUrl && video.videoUrl === youtubeUrl) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "absolute inset-0 bg-black/60 flex items-center justify-center",
@@ -1909,12 +1940,12 @@ function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }) {
                                                     className: "animate-spin text-white"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/background-video-selector.tsx",
-                                                    lineNumber: 375,
+                                                    lineNumber: 418,
                                                     columnNumber: 108
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/background-video-selector.tsx",
-                                                lineNumber: 375,
+                                                lineNumber: 418,
                                                 columnNumber: 29
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1923,18 +1954,18 @@ function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }) {
                                                     className: "w-3 h-3 text-red-500"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/background-video-selector.tsx",
-                                                    lineNumber: 377,
-                                                    columnNumber: 83
-                                                }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$check$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Check$3e$__["Check"], {
+                                                    lineNumber: 422,
+                                                    columnNumber: 48
+                                                }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$video$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Video$3e$__["Video"], {
                                                     className: "w-3 h-3 text-white"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/background-video-selector.tsx",
-                                                    lineNumber: 377,
-                                                    columnNumber: 129
+                                                    lineNumber: 422,
+                                                    columnNumber: 94
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/background-video-selector.tsx",
-                                                lineNumber: 377,
+                                                lineNumber: 421,
                                                 columnNumber: 25
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1944,48 +1975,48 @@ function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }) {
                                                     children: video.title
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/background-video-selector.tsx",
-                                                    lineNumber: 379,
+                                                    lineNumber: 426,
                                                     columnNumber: 29
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/background-video-selector.tsx",
-                                                lineNumber: 378,
+                                                lineNumber: 425,
                                                 columnNumber: 25
                                             }, this)
                                         ]
                                     }, video.id, true, {
                                         fileName: "[project]/components/background-video-selector.tsx",
-                                        lineNumber: 361,
+                                        lineNumber: 396,
                                         columnNumber: 21
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/components/background-video-selector.tsx",
-                                lineNumber: 359,
+                                lineNumber: 394,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$scroll$2d$area$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ScrollBar"], {
                                 orientation: "horizontal"
                             }, void 0, false, {
                                 fileName: "[project]/components/background-video-selector.tsx",
-                                lineNumber: 384,
+                                lineNumber: 431,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/background-video-selector.tsx",
-                        lineNumber: 358,
+                        lineNumber: 393,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/background-video-selector.tsx",
-                lineNumber: 255,
+                lineNumber: 296,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/background-video-selector.tsx",
-        lineNumber: 253,
+        lineNumber: 294,
         columnNumber: 5
     }, this);
 }
@@ -3021,315 +3052,58 @@ __turbopack_context__.s([
     ()=>downloadBlob,
     "getAudioDuration",
     ()=>getAudioDuration,
+    "loadFFmpeg",
+    ()=>loadFFmpeg,
     "recordVideoWithTextOverlay",
     ()=>recordVideoWithTextOverlay
 ]);
-// Cargar FFmpeg dinámicamente
-let ffmpegInstance = null;
-let ffmpegLoading = false;
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$ffmpeg$2f$ffmpeg$2f$dist$2f$esm$2f$empty$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@ffmpeg/ffmpeg/dist/esm/empty.mjs [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$ffmpeg$2f$util$2f$dist$2f$esm$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@ffmpeg/util/dist/esm/index.js [app-ssr] (ecmascript)");
+;
+;
+let ffmpeg = null;
 async function loadFFmpeg() {
-    if (ffmpegInstance) return ffmpegInstance;
-    if (ffmpegLoading) {
-        while(ffmpegLoading){
-            await new Promise((r)=>setTimeout(r, 100));
-        }
-        return ffmpegInstance;
-    }
-    ffmpegLoading = true;
+    if (ffmpeg) return ffmpeg;
+    const ffmpegInstance = new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$ffmpeg$2f$ffmpeg$2f$dist$2f$esm$2f$empty$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FFmpeg"]();
+    const baseURL = "https://unpkg.com/@ffmpeg/core@0.12.6/dist/umd";
     try {
-        const { FFmpeg } = await __turbopack_context__.A("[project]/node_modules/@ffmpeg/ffmpeg/dist/esm/empty.mjs [app-ssr] (ecmascript, async loader)");
-        const { fetchFile, toBlobURL } = await __turbopack_context__.A("[project]/node_modules/@ffmpeg/util/dist/esm/index.js [app-ssr] (ecmascript, async loader)");
-        const ffmpeg = new FFmpeg();
-        const baseURL = "https://unpkg.com/@ffmpeg/core@0.12.6/dist/esm";
-        await ffmpeg.load({
-            coreURL: await toBlobURL(`${baseURL}/ffmpeg-core.js`, "text/javascript"),
-            wasmURL: await toBlobURL(`${baseURL}/ffmpeg-core.wasm`, "application/wasm")
+        await ffmpegInstance.load({
+            coreURL: await (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$ffmpeg$2f$util$2f$dist$2f$esm$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["toBlobURL"])(`${baseURL}/ffmpeg-core.js`, "text/javascript"),
+            wasmURL: await (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$ffmpeg$2f$util$2f$dist$2f$esm$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["toBlobURL"])(`${baseURL}/ffmpeg-core.wasm`, "application/wasm")
         });
-        ffmpegInstance = {
-            ffmpeg,
-            fetchFile
-        };
-        return ffmpegInstance;
+        ffmpeg = ffmpegInstance;
+        return ffmpeg;
     } catch (error) {
-        console.error("Error loading FFmpeg:", error);
+        console.error("Error fatal cargando FFmpeg:", error);
         throw error;
-    } finally{
-        ffmpegLoading = false;
     }
-}
-async function recordVideoWithTextOverlay(videoElement, audioBlob, script, format, textStyle, onProgress, targetDuration) {
-    return new Promise(async (resolve, reject)=>{
-        try {
-            const dimensions = {
-                "9:16": {
-                    width: 1080,
-                    height: 1920
-                },
-                "16:9": {
-                    width: 1920,
-                    height: 1080
-                },
-                "1:1": {
-                    width: 1080,
-                    height: 1080
-                }
-            };
-            const { width, height } = dimensions[format];
-            const canvas = document.createElement("canvas");
-            canvas.width = width;
-            canvas.height = height;
-            const ctx = canvas.getContext("2d");
-            const audioUrl = URL.createObjectURL(audioBlob);
-            const audio = new Audio(audioUrl);
-            await new Promise((res)=>{
-                audio.addEventListener("loadedmetadata", ()=>res());
-                audio.load();
-            });
-            const duration = targetDuration || audio.duration || 10;
-            const words = script.split(/\s+/).filter(Boolean);
-            const sentences = script.split(/[.!?]+/).filter(Boolean);
-            const wordsPerGroup = 3;
-            const wordsPerSecond = 2.5;
-            const canvasStream = canvas.captureStream(30);
-            const audioContext = new AudioContext();
-            const audioSource = audioContext.createMediaElementSource(audio);
-            const destination = audioContext.createMediaStreamDestination();
-            audioSource.connect(destination);
-            audioSource.connect(audioContext.destination);
-            const combinedStream = new MediaStream([
-                ...canvasStream.getVideoTracks(),
-                ...destination.stream.getAudioTracks()
-            ]);
-            const mimeType = MediaRecorder.isTypeSupported("video/webm;codecs=vp9,opus") ? "video/webm;codecs=vp9,opus" : MediaRecorder.isTypeSupported("video/webm;codecs=vp8,opus") ? "video/webm;codecs=vp8,opus" : "video/webm";
-            const mediaRecorder = new MediaRecorder(combinedStream, {
-                mimeType,
-                videoBitsPerSecond: 8000000
-            });
-            const chunks = [];
-            mediaRecorder.ondataavailable = (e)=>{
-                if (e.data.size > 0) {
-                    chunks.push(e.data);
-                }
-            };
-            mediaRecorder.onstop = async ()=>{
-                const webmBlob = new Blob(chunks, {
-                    type: "video/webm"
-                });
-                URL.revokeObjectURL(audioUrl);
-                audioContext.close();
-                resolve(webmBlob);
-            };
-            mediaRecorder.onerror = (e)=>{
-                URL.revokeObjectURL(audioUrl);
-                reject(e);
-            };
-            mediaRecorder.start(100);
-            videoElement.currentTime = 0;
-            videoElement.muted = true;
-            videoElement.loop = true; // Enable looping in case video is shorter than audio
-            videoElement.play();
-            audio.play();
-            const startTime = performance.now();
-            const drawTikTokText = (text)=>{
-                ctx.save();
-                const gradient = ctx.createLinearGradient(0, height * 0.4, 0, height * 0.6);
-                gradient.addColorStop(0, "rgba(0,0,0,0)");
-                gradient.addColorStop(0.5, "rgba(0,0,0,0.3)");
-                gradient.addColorStop(1, "rgba(0,0,0,0)");
-                ctx.fillStyle = gradient;
-                ctx.fillRect(0, height * 0.35, width, height * 0.3);
-                const fontSize = Math.round(width * 0.08);
-                ctx.font = `900 ${fontSize}px Inter, system-ui, sans-serif`;
-                ctx.textAlign = "center";
-                ctx.textBaseline = "middle";
-                const textX = width / 2;
-                const textY = height / 2;
-                ctx.shadowColor = "rgba(0,0,0,0.9)";
-                ctx.shadowBlur = 20;
-                ctx.shadowOffsetX = 4;
-                ctx.shadowOffsetY = 4;
-                ctx.strokeStyle = "#000000";
-                ctx.lineWidth = fontSize * 0.15;
-                ctx.lineJoin = "round";
-                ctx.miterLimit = 2;
-                ctx.strokeText(text.toUpperCase(), textX, textY);
-                ctx.fillStyle = "#FFFFFF";
-                ctx.fillText(text.toUpperCase(), textX, textY);
-                ctx.shadowBlur = 0;
-                ctx.shadowOffsetX = 0;
-                ctx.shadowOffsetY = 0;
-                const barHeight = fontSize * 0.5;
-                const barY = textY + fontSize * 0.8;
-                const barText = "REELFORGE AI";
-                ctx.font = `800 ${barHeight * 0.6}px Inter, system-ui, sans-serif`;
-                const barWidth = ctx.measureText(barText).width + barHeight;
-                ctx.fillStyle = "rgba(34, 197, 94, 0.9)";
-                ctx.beginPath();
-                ctx.roundRect(textX - barWidth / 2, barY - barHeight / 2, barWidth, barHeight, barHeight * 0.2);
-                ctx.fill();
-                ctx.fillStyle = "#000000";
-                ctx.fillText(barText, textX, barY);
-                ctx.restore();
-            };
-            const drawRedditText = (sentenceIndex)=>{
-                ctx.save();
-                const cardWidth = width * 0.9;
-                const cardHeight = height * 0.35;
-                const cardX = (width - cardWidth) / 2;
-                const cardY = (height - cardHeight) / 2;
-                ctx.fillStyle = "#FFFFFF";
-                ctx.beginPath();
-                ctx.roundRect(cardX, cardY, cardWidth, cardHeight, 16);
-                ctx.fill();
-                const headerHeight = cardHeight * 0.15;
-                ctx.fillStyle = "#F9FAFB";
-                ctx.beginPath();
-                ctx.roundRect(cardX, cardY, cardWidth, headerHeight, [
-                    16,
-                    16,
-                    0,
-                    0
-                ]);
-                ctx.fill();
-                const iconSize = headerHeight * 0.6;
-                const iconX = cardX + 16;
-                const iconY = cardY + (headerHeight - iconSize) / 2;
-                const iconGradient = ctx.createLinearGradient(iconX, iconY, iconX + iconSize, iconY + iconSize);
-                iconGradient.addColorStop(0, "#FB923C");
-                iconGradient.addColorStop(1, "#EF4444");
-                ctx.fillStyle = iconGradient;
-                ctx.beginPath();
-                ctx.arc(iconX + iconSize / 2, iconY + iconSize / 2, iconSize / 2, 0, Math.PI * 2);
-                ctx.fill();
-                ctx.fillStyle = "#FFFFFF";
-                ctx.font = `bold ${iconSize * 0.5}px Inter, system-ui, sans-serif`;
-                ctx.textAlign = "center";
-                ctx.textBaseline = "middle";
-                ctx.fillText("r/", iconX + iconSize / 2, iconY + iconSize / 2);
-                ctx.fillStyle = "#4B5563";
-                ctx.font = `600 ${headerHeight * 0.35}px Inter, system-ui, sans-serif`;
-                ctx.textAlign = "left";
-                ctx.textBaseline = "middle";
-                ctx.fillText("r/historias • hace 4 h", iconX + iconSize + 12, cardY + headerHeight / 2);
-                const title = sentences[0]?.trim() || "Historia increíble";
-                const titleY = cardY + headerHeight + 24;
-                ctx.fillStyle = "#111827";
-                ctx.font = `700 ${cardHeight * 0.08}px Inter, system-ui, sans-serif`;
-                ctx.textAlign = "left";
-                ctx.fillText(title.substring(0, 50) + (title.length > 50 ? "..." : ""), cardX + 16, titleY);
-                const bodyY = titleY + cardHeight * 0.12;
-                const visibleSentences = sentences.slice(1, Math.min(sentenceIndex + 2, sentences.length));
-                ctx.fillStyle = "#374151";
-                ctx.font = `400 ${cardHeight * 0.055}px Inter, system-ui, sans-serif`;
-                let currentY = bodyY;
-                visibleSentences.forEach((sentence, i)=>{
-                    const text = sentence.trim() + ".";
-                    ctx.fillText(text.substring(0, 60) + (text.length > 60 ? "..." : ""), cardX + 16, currentY);
-                    currentY += cardHeight * 0.08;
-                });
-                const footerY = cardY + cardHeight - headerHeight;
-                ctx.fillStyle = "#F9FAFB";
-                ctx.beginPath();
-                ctx.roundRect(cardX, footerY, cardWidth, headerHeight, [
-                    0,
-                    0,
-                    16,
-                    16
-                ]);
-                ctx.fill();
-                ctx.fillStyle = "#6B7280";
-                ctx.font = `500 ${headerHeight * 0.35}px Inter, system-ui, sans-serif`;
-                ctx.textAlign = "left";
-                ctx.fillText("↑ 3.5 mil    💬 138    🏆 1    ↗ Compartir", cardX + 16, footerY + headerHeight / 2);
-                ctx.restore();
-            };
-            const drawMinimalText = (text)=>{
-                ctx.save();
-                const boxWidth = width * 0.9;
-                const boxHeight = height * 0.1;
-                const boxX = (width - boxWidth) / 2;
-                const boxY = height * 0.75;
-                ctx.fillStyle = "rgba(0, 0, 0, 0.6)";
-                ctx.beginPath();
-                ctx.roundRect(boxX, boxY, boxWidth, boxHeight, 16);
-                ctx.fill();
-                const fontSize = Math.round(width * 0.045);
-                ctx.font = `500 ${fontSize}px Inter, system-ui, sans-serif`;
-                ctx.textAlign = "center";
-                ctx.textBaseline = "middle";
-                ctx.fillStyle = "#FFFFFF";
-                ctx.fillText(text, width / 2, boxY + boxHeight / 2);
-                ctx.restore();
-            };
-            const drawFrame = ()=>{
-                const elapsed = (performance.now() - startTime) / 1000;
-                const progress = Math.min(elapsed / duration, 1);
-                onProgress?.(progress * 70);
-                if (progress < 1 && mediaRecorder.state === "recording") {
-                    ctx.drawImage(videoElement, 0, 0, width, height);
-                    const currentWordIndex = Math.floor(elapsed * wordsPerSecond / wordsPerGroup) * wordsPerGroup;
-                    const currentSentenceIndex = Math.floor(elapsed / 3);
-                    if (textStyle === "tiktok") {
-                        const currentWords = words.slice(currentWordIndex, currentWordIndex + wordsPerGroup).join(" ");
-                        if (currentWords) drawTikTokText(currentWords);
-                    } else if (textStyle === "reddit") {
-                        drawRedditText(currentSentenceIndex);
-                    } else if (textStyle === "minimal") {
-                        const currentWords = words.slice(currentWordIndex, currentWordIndex + wordsPerGroup).join(" ");
-                        if (currentWords) drawMinimalText(currentWords);
-                    }
-                    requestAnimationFrame(drawFrame);
-                } else {
-                    mediaRecorder.stop();
-                    videoElement.pause();
-                    videoElement.loop = false;
-                    audio.pause();
-                }
-            };
-            drawFrame();
-        } catch (error) {
-            reject(error);
-        }
-    });
 }
 async function convertWebmToMp4(webmBlob, onProgress) {
     try {
-        onProgress?.(75);
-        const { ffmpeg, fetchFile } = await loadFFmpeg();
-        onProgress?.(80);
-        await ffmpeg.writeFile("input.webm", await fetchFile(webmBlob));
-        onProgress?.(85);
+        const ffmpeg = await loadFFmpeg();
+        await ffmpeg.writeFile("input.webm", await (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$ffmpeg$2f$util$2f$dist$2f$esm$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["fetchFile"])(webmBlob));
+        ffmpeg.on("progress", ({ progress })=>{
+            if (onProgress) onProgress(progress * 100);
+        });
         await ffmpeg.exec([
             "-i",
             "input.webm",
             "-c:v",
             "libx264",
             "-preset",
-            "fast",
-            "-crf",
-            "23",
-            "-c:a",
-            "aac",
-            "-b:a",
-            "128k",
-            "-movflags",
-            "+faststart",
+            "ultrafast",
             "output.mp4"
         ]);
-        onProgress?.(95);
         const data = await ffmpeg.readFile("output.mp4");
-        const mp4Blob = new Blob([
+        await ffmpeg.deleteFile("input.webm");
+        await ffmpeg.deleteFile("output.mp4");
+        return new Blob([
             data
         ], {
             type: "video/mp4"
         });
-        await ffmpeg.deleteFile("input.webm");
-        await ffmpeg.deleteFile("output.mp4");
-        onProgress?.(100);
-        return mp4Blob;
     } catch (error) {
-        console.error("Error converting to MP4:", error);
-        onProgress?.(100);
+        console.error("Error conversión MP4 (retornando original):", error);
         return webmBlob;
     }
 }
@@ -3343,17 +3117,183 @@ function downloadBlob(blob, filename) {
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
 }
-async function getAudioDuration(audioBlob) {
+async function getAudioDuration(blob) {
     return new Promise((resolve)=>{
-        const audio = new Audio();
-        audio.src = URL.createObjectURL(audioBlob);
-        audio.addEventListener("loadedmetadata", ()=>{
-            resolve(audio.duration);
-            URL.revokeObjectURL(audio.src);
-        });
-        audio.addEventListener("error", ()=>{
-            resolve(10);
-        });
+        const audio = new Audio(URL.createObjectURL(blob));
+        audio.onloadedmetadata = ()=>resolve(audio.duration);
+        audio.onerror = ()=>resolve(0);
+    });
+}
+/**
+ * HELPER: Dibuja una imagen o video cubriendo el canvas (Object-Fit: Cover)
+ * Esto soluciona el problema de zoom y centrado.
+ */ function drawCover(ctx, img, x, y, w, h) {
+    // @ts-ignore
+    const imgW = img.videoWidth || img.width;
+    // @ts-ignore
+    const imgH = img.videoHeight || img.height;
+    const ratio = Math.max(w / imgW, h / imgH);
+    const newW = imgW * ratio;
+    const newH = imgH * ratio;
+    const offsetX = (w - newW) / 2;
+    const offsetY = (h - newH) / 2;
+    ctx.drawImage(img, x + offsetX, y + offsetY, newW, newH);
+}
+/**
+ * HELPER: Dibuja texto con salto de línea automático
+ */ function wrapText(ctx, text, x, y, maxWidth, lineHeight) {
+    const words = text.split(' ');
+    let line = '';
+    let currentY = y;
+    for(let n = 0; n < words.length; n++){
+        const testLine = line + words[n] + ' ';
+        const metrics = ctx.measureText(testLine);
+        const testWidth = metrics.width;
+        if (testWidth > maxWidth && n > 0) {
+            ctx.fillText(line, x, currentY);
+            ctx.strokeText(line, x, currentY); // Borde negro para legibilidad
+            line = words[n] + ' ';
+            currentY += lineHeight;
+        } else {
+            line = testLine;
+        }
+    }
+    ctx.fillText(line, x, currentY);
+    ctx.strokeText(line, x, currentY);
+}
+async function recordVideoWithTextOverlay(videoElement, audioBlob, script, videoFormat, textStyle, onProgress, duration, userData// NUEVO: Datos del usuario Reddit
+) {
+    return new Promise(async (resolve, reject)=>{
+        try {
+            // 1. Configurar dimensiones verticales (TikTok Style)
+            const CANVAS_WIDTH = 720; // 720p Vertical
+            const CANVAS_HEIGHT = 1280;
+            // 2. Preparar Video
+            videoElement.crossOrigin = "anonymous";
+            videoElement.muted = true;
+            videoElement.currentTime = 0;
+            if (videoElement.readyState < 2) await new Promise((r)=>{
+                videoElement.oncanplay = r;
+            });
+            // 3. Preparar Audio
+            const AudioContext = window.AudioContext || window.webkitAudioContext;
+            const audioCtx = new AudioContext();
+            const dest = audioCtx.createMediaStreamDestination();
+            const sourceNode = audioCtx.createBufferSource();
+            const audioBuffer = await audioBlob.arrayBuffer();
+            const decodedAudio = await audioCtx.decodeAudioData(audioBuffer);
+            sourceNode.buffer = decodedAudio;
+            sourceNode.connect(dest);
+            // 4. Cargar Avatar de Usuario (si existe)
+            let avatarImg = null;
+            if (userData?.avatar) {
+                avatarImg = new Image();
+                avatarImg.crossOrigin = "anonymous";
+                avatarImg.src = userData.avatar;
+                await new Promise((r)=>avatarImg.onload = r).catch(()=>avatarImg = null);
+            }
+            // 5. Canvas
+            const canvas = document.createElement("canvas");
+            canvas.width = CANVAS_WIDTH;
+            canvas.height = CANVAS_HEIGHT;
+            const ctx = canvas.getContext("2d");
+            if (!ctx) throw new Error("No ctx");
+            // 6. Recorder
+            const canvasStream = canvas.captureStream(30);
+            const combinedStream = new MediaStream([
+                ...canvasStream.getVideoTracks(),
+                ...dest.stream.getAudioTracks()
+            ]);
+            const recorder = new MediaRecorder(combinedStream, {
+                mimeType: "video/webm;codecs=vp9",
+                videoBitsPerSecond: 5000000
+            });
+            const chunks = [];
+            recorder.ondataavailable = (e)=>{
+                if (e.data.size > 0) chunks.push(e.data);
+            };
+            recorder.onstop = ()=>{
+                const fullBlob = new Blob(chunks, {
+                    type: "video/webm"
+                });
+                combinedStream.getTracks().forEach((track)=>track.stop());
+                audioCtx.close();
+                resolve(fullBlob);
+            };
+            // 7. Bucle de Dibujo (Aquí ocurre la magia)
+            let animationId;
+            const drawFrame = ()=>{
+                // A. Fondo Negro
+                ctx.fillStyle = "#000";
+                ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+                // B. Video de Fondo (Centrado y Recortado - COVER)
+                drawCover(ctx, videoElement, 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+                // --- UI ESTILO REDDIT ---
+                const padding = 40;
+                const headerY = 200; // Posición vertical del header
+                // C. Caja semitransparente detrás del texto (Opcional, mejora lectura)
+                // ctx.fillStyle = "rgba(0, 0, 0, 0.3)";
+                // ctx.fillRect(20, headerY - 20, CANVAS_WIDTH - 40, CANVAS_HEIGHT / 2);
+                // D. Avatar y Nombre
+                if (avatarImg) {
+                    // Avatar circular
+                    ctx.save();
+                    ctx.beginPath();
+                    ctx.arc(padding + 25, headerY, 25, 0, Math.PI * 2, true);
+                    ctx.closePath();
+                    ctx.clip();
+                    ctx.drawImage(avatarImg, padding, headerY - 25, 50, 50);
+                    ctx.restore();
+                } else {
+                    // Placeholder circular si no hay imagen
+                    ctx.fillStyle = "#FF4500"; // Reddit Orange
+                    ctx.beginPath();
+                    ctx.arc(padding + 25, headerY, 25, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+                // Nombre de usuario
+                ctx.fillStyle = "white";
+                ctx.font = "bold 24px Arial";
+                ctx.shadowColor = "black";
+                ctx.shadowBlur = 4;
+                ctx.fillText(`u/${userData?.name || 'RedditUser'}`, padding + 60, headerY + 8);
+                // E. Texto de la Historia (Subtítulos o Texto completo)
+                // Aquí dibujamos el script. Para hacerlo estilo TikTok, lo ideal es
+                // mostrar porciones o todo el texto centrado.
+                ctx.font = "bold 32px Arial";
+                ctx.fillStyle = "white";
+                ctx.textAlign = "center";
+                ctx.strokeStyle = "black"; // Borde negro al texto
+                ctx.lineWidth = 4;
+                // Centramos el texto en la mitad de la pantalla
+                wrapText(ctx, script, CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2 - 100, CANVAS_WIDTH - 80, 45);
+                if (recorder.state === 'recording') {
+                    animationId = requestAnimationFrame(drawFrame);
+                }
+            };
+            // 8. Iniciar
+            await videoElement.play();
+            recorder.start();
+            sourceNode.start(0);
+            drawFrame();
+            // 9. Control de Tiempo
+            const totalDuration = duration || decodedAudio.duration || 10;
+            const startTime = Date.now();
+            const progressInterval = setInterval(()=>{
+                const elapsed = (Date.now() - startTime) / 1000;
+                const p = Math.min(elapsed / totalDuration * 100, 99);
+                onProgress(p);
+            }, 200);
+            sourceNode.onended = ()=>{
+                clearInterval(progressInterval);
+                onProgress(100);
+                if (recorder.state === 'recording') recorder.stop();
+                videoElement.pause();
+                cancelAnimationFrame(animationId);
+            };
+        } catch (e) {
+            reject(e);
+        }
     });
 }
 }),

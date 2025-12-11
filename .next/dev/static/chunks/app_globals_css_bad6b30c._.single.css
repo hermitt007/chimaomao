@@ -454,10 +454,6 @@
     visibility: hidden;
   }
 
-  .visible {
-    visibility: visible;
-  }
-
   .sr-only {
     clip-path: inset(50%);
     white-space: nowrap;
@@ -2073,6 +2069,16 @@
     background-color: var(--secondary);
   }
 
+  .bg-secondary\/20 {
+    background-color: var(--secondary);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-secondary\/20 {
+      background-color: color-mix(in oklab, var(--secondary) 20%, transparent);
+    }
+  }
+
   .bg-secondary\/50 {
     background-color: var(--secondary);
   }
@@ -2962,6 +2968,10 @@
 
   .fade-in {
     --tw-enter-opacity: 0;
+  }
+
+  .paused {
+    animation-play-state: paused;
   }
 
   .slide-in-from-bottom-2 {

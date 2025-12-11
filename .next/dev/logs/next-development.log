@@ -1,200 +1,267 @@
-[00:00:00.736] Server  LOG      ✓ Ready in 468ms
-[00:00:30.668] Server  LOG      ○ Compiling / ...
-[00:00:40.825] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:41.888] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:41.888] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:00:41.889] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/","r":"https://refactored-halibut-r4g54pvgq9ggf5wr9.github.dev/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765419043230}
-[00:02:12.933] Browser LOG     Probando Cobalt: https://cobalt.wuk.sh
-[00:02:13.934] Browser LOG     Probando Cobalt: https://api.cobalt.tools
-[00:02:15.336] Browser LOG     Probando Cobalt: https://cobalt.kwiatekmiki.com
-[00:02:15.773] Browser LOG     Probando Cobalt: https://cobalt.tools
-[00:02:16.048] Browser LOG     Cobalt falló. Activando RapidAPI...
-[00:02:17.077] Browser ERROR   {}
-[00:04:04.693] Server  LOG      ✓ Compiled in 87ms
-[00:04:23.568] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:04:24.171] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:04:24.171] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:04:24.171] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765419265522}
-[00:04:48.853] Browser LOG     Probando Cobalt: https://cobalt.wuk.sh
-[00:04:49.685] Browser LOG     Probando Cobalt: https://api.cobalt.tools
-[00:04:50.987] Browser LOG     Probando Cobalt: https://cobalt.kwiatekmiki.com
-[00:04:51.167] Browser LOG     Probando Cobalt: https://cobalt.tools
-[00:04:51.484] Browser LOG     Cobalt falló. Activando RapidAPI...
-[00:04:52.513] Browser ERROR   {}
-[00:06:43.783] Server  LOG      ✓ Compiled in 163ms
-[00:07:10.178] Browser LOG     Probando Cobalt: https://cobalt.wuk.sh
-[00:07:10.751] Browser LOG     Probando Cobalt: https://api.cobalt.tools
-[00:07:11.739] Browser LOG     Probando Cobalt: https://cobalt.kwiatekmiki.com
-[00:07:12.133] Browser LOG     Probando Cobalt: https://cobalt.tools
-[00:07:12.133] Browser LOG     Cobalt falló. Activando RapidAPI...
-[00:07:13.479] Browser ERROR   {}
-[00:07:18.559] Browser LOG     Probando Cobalt: https://cobalt.wuk.sh
-[00:07:18.924] Browser LOG     Probando Cobalt: https://api.cobalt.tools
-[00:07:20.252] Browser LOG     Probando Cobalt: https://cobalt.kwiatekmiki.com
-[00:07:20.252] Browser LOG     Probando Cobalt: https://cobalt.tools
-[00:07:20.252] Browser LOG     Cobalt falló. Activando RapidAPI...
-[00:07:21.770] Browser ERROR   {}
-[00:08:19.699] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:08:21.664] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:08:21.664] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:08:21.664] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765419503033}
-[00:08:36.483] Browser LOG     Probando Cobalt: https://cobalt.wuk.sh
-[00:08:37.082] Browser LOG     Probando Cobalt: https://api.cobalt.tools
-[00:08:38.097] Browser LOG     Probando Cobalt: https://cobalt.kwiatekmiki.com
-[00:08:38.684] Browser LOG     Probando Cobalt: https://cobalt.tools
-[00:08:38.808] Browser LOG     Cobalt falló. Activando RapidAPI...
-[00:08:39.936] Browser ERROR   {}
-[00:10:08.355] Server  LOG      ✓ Compiled in 260ms
-[00:10:12.201] Server  LOG      ✓ Compiled in 100ms
-[00:10:22.483] Browser ERROR   ./components/video-generator.tsx:6:1
-Export BackgroundVideoSelector doesn't exist in target module
-  4 | import { ScriptInput } from "@/components/script-input"
-  5 | import { VideoFormatSelector } from "@/components/video-format-selector"
-> 6 | import { BackgroundVideoSelector } from "@/components/background-video-selector"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  7 | import { VideoPreview, type VideoPreviewHandle } from "@/components/video-preview"
-  8 | import { GenerateButton } from "@/components/generate-button"
-  9 | import { TextStyleSelector, type TextStyle } from "@/components/text-style-selector"
+[00:00:06.171] Server  LOG      ✓ Ready in 5.1s
+[00:01:15.006] Server  LOG      ○ Compiling / ...
+[00:01:27.254] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:30.778] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:01:30.778] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:01:30.778] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/","r":"https://refactored-halibut-r4g54pvgq9ggf5wr9.github.dev/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765425475993}
+[00:06:27.996] Browser ERROR   Error loading FFmpeg: Error: Cannot find module as expression is too dynamic
+[00:06:27.996] Browser ERROR   Error converting to MP4: Error: Cannot find module as expression is too dynamic
+[00:11:27.722] Server  LOG      ✓ Compiled in 134ms
+[00:11:29.488] Server  LOG      ✓ Compiled in 203ms
+[00:11:29.873] Browser ERROR   ./components/generate-button.tsx:10:1
+Export convertWebmToMp4 doesn't exist in target module
+   8 | import type { BackgroundVideo, VideoFormat } from "@/components/video-generator"
+   9 | import type { TextStyle } from "@/components/text-style-selector"
+> 10 | import { downloadBlob, recordVideoWithTextOverlay, convertWebmToMp4, getAudioDuration } from "@/lib/video-recorder"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+  12 | import { Progress } from "@/components/ui/progress"
+  13 |
 
-The export BackgroundVideoSelector was not found in module [project]/components/background-video-selector.tsx [app-client] (ecmascript).
+The export convertWebmToMp4 was not found in module [project]/lib/video-recorder.ts [app-client] (ecmascript).
 The module has no exports at all.
 All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
 
-Import trace:
-  Server Component:
-    ./components/video-generator.tsx
-    ./app/page.tsx
-[00:10:22.483] Browser ERROR   ./components/video-generator.tsx:6:1
-Export BackgroundVideoSelector doesn't exist in target module
-  4 | import { ScriptInput } from "@/components/script-input"
-  5 | import { VideoFormatSelector } from "@/components/video-format-selector"
-> 6 | import { BackgroundVideoSelector } from "@/components/background-video-selector"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  7 | import { VideoPreview, type VideoPreviewHandle } from "@/components/video-preview"
-  8 | import { GenerateButton } from "@/components/generate-button"
-  9 | import { TextStyleSelector, type TextStyle } from "@/components/text-style-selector"
+Import traces:
+  Client Component Browser:
+    ./components/generate-button.tsx [Client Component Browser]
+    ./components/video-generator.tsx [Client Component Browser]
+    ./components/video-generator.tsx [Server Component]
+    ./app/page.tsx [Server Component]
 
-The export BackgroundVideoSelector was not found in module [project]/components/background-video-selector.tsx [app-ssr] (ecmascript).
+  Client Component SSR:
+    ./components/generate-button.tsx [Client Component SSR]
+    ./components/video-generator.tsx [Client Component SSR]
+    ./components/video-generator.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+[00:11:29.873] Browser ERROR   ./components/generate-button.tsx:10:1
+Export convertWebmToMp4 doesn't exist in target module
+   8 | import type { BackgroundVideo, VideoFormat } from "@/components/video-generator"
+   9 | import type { TextStyle } from "@/components/text-style-selector"
+> 10 | import { downloadBlob, recordVideoWithTextOverlay, convertWebmToMp4, getAudioDuration } from "@/lib/video-recorder"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+  12 | import { Progress } from "@/components/ui/progress"
+  13 |
+
+The export convertWebmToMp4 was not found in module [project]/lib/video-recorder.ts [app-ssr] (ecmascript).
 The module has no exports at all.
 All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
 
-Import trace:
-  Server Component:
-    ./components/video-generator.tsx
-    ./app/page.tsx
-[00:10:31.239] Browser LOG     Probando Cobalt: https://cobalt.wuk.sh
-[00:10:32.267] Browser LOG     Probando Cobalt: https://api.cobalt.tools
-[00:10:33.784] Browser LOG     Probando Cobalt: https://cobalt.kwiatekmiki.com
-[00:10:34.154] Browser LOG     Probando Cobalt: https://cobalt.tools
-[00:10:34.154] Browser LOG     Cobalt falló. Activando RapidAPI...
-[00:10:35.927] Browser ERROR   {}
-[00:10:53.933] Browser LOG     Probando Cobalt: https://cobalt.wuk.sh
-[00:10:54.526] Browser LOG     Probando Cobalt: https://api.cobalt.tools
-[00:10:55.628] Browser LOG     Probando Cobalt: https://cobalt.kwiatekmiki.com
-[00:10:55.628] Browser LOG     Probando Cobalt: https://cobalt.tools
-[00:10:55.628] Browser LOG     Cobalt falló. Activando RapidAPI...
-[00:10:56.463] Browser ERROR   {}
-[00:12:32.059] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:12:33.370] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:12:33.370] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:12:33.370] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765419754611}
-[00:12:41.455] Browser LOG     Probando: https://cobalt.wuk.sh
-[00:12:42.057] Browser LOG     Probando: https://api.cobalt.tools
-[00:12:42.953] Browser LOG     Probando: https://cobalt.kwiatekmiki.com
-[00:12:43.461] Browser LOG     Probando: https://cobalt.tools
-[00:12:43.461] Browser LOG     Activando RapidAPI...
-[00:12:44.899] Browser ERROR   {}
-[00:16:10.902] Server  LOG      ✓ Compiled in 132ms
-[00:16:45.058] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:16:46.874] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:16:46.874] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:16:46.874] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765420008249}
-[00:16:53.615] Browser LOG     Probando Cobalt: https://cobalt.wuk.sh
-[00:16:54.342] Browser LOG     Probando Cobalt: https://api.cobalt.tools
-[00:16:55.793] Browser LOG     Probando Cobalt: https://cobalt.kwiatekmiki.com
-[00:16:56.411] Browser LOG     Probando Cobalt: https://cobalt.tools
-[00:16:56.968] Browser LOG     Cobalt falló. Activando RapidAPI (Usuario)...
-[00:16:58.239] Browser ERROR   {}
-[00:22:26.330] Server  LOG      ✓ Compiled in 60ms
-[00:22:56.283] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:22:57.915] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:22:57.915] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:22:57.915] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765420379296}
-[00:23:20.858] Browser ERROR   {}
-[00:24:00.189] Browser ERROR   {}
-[00:24:03.424] Browser ERROR   {}
-[00:24:06.194] Browser ERROR   {}
-[00:24:06.487] Browser ERROR   {}
-[00:24:09.276] Browser ERROR   {}
-[00:24:12.898] Browser ERROR   {}
-[00:24:13.282] Browser ERROR   {}
-[00:24:15.756] Browser ERROR   {}
-[00:24:16.016] Browser ERROR   {}
-[00:26:18.387] Server  LOG      ✓ Compiled in 53ms
-[00:30:21.706] Server  LOG      ✓ Compiled in 499ms
-[00:31:02.784] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:31:05.526] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:31:05.526] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:31:05.526] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765420866916}
-[00:31:54.429] Browser LOG     Probando Cobalt: https://cobalt.wuk.sh
-[00:31:55.478] Browser LOG     Probando Cobalt: https://api.cobalt.tools
-[00:31:56.973] Browser LOG     Probando Cobalt: https://cobalt.kwiatekmiki.com
-[00:31:57.441] Browser LOG     Cobalt falló. Probando tu API...
-[00:31:58.552] Browser ERROR   {}
-[00:38:17.532] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:38:22.116] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:38:22.116] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:38:22.116] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765421303509}
-[00:38:31.159] Browser ERROR   {}
-[00:38:36.605] Browser ERROR   {}
-[00:38:39.620] Browser ERROR   {}
-[00:38:44.519] Browser ERROR   {}
-[00:40:24.409] Server  LOG      ✓ Compiled in 103ms
-[00:40:27.855] Browser ERROR   ./components/video-generator.tsx:6:1
-Export BackgroundVideoSelector doesn't exist in target module
-  4 | import { ScriptInput } from "@/components/script-input"
-  5 | import { VideoFormatSelector } from "@/components/video-format-selector"
-> 6 | import { BackgroundVideoSelector } from "@/components/background-video-selector"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  7 | import { VideoPreview, type VideoPreviewHandle } from "@/components/video-preview"
-  8 | import { GenerateButton } from "@/components/generate-button"
-  9 | import { TextStyleSelector, type TextStyle } from "@/components/text-style-selector"
+Import traces:
+  Client Component Browser:
+    ./components/generate-button.tsx [Client Component Browser]
+    ./components/video-generator.tsx [Client Component Browser]
+    ./components/video-generator.tsx [Server Component]
+    ./app/page.tsx [Server Component]
 
-The export BackgroundVideoSelector was not found in module [project]/components/background-video-selector.tsx [app-client] (ecmascript).
+  Client Component SSR:
+    ./components/generate-button.tsx [Client Component SSR]
+    ./components/video-generator.tsx [Client Component SSR]
+    ./components/video-generator.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+[00:11:29.873] Browser ERROR   ./components/generate-button.tsx:10:1
+Export downloadBlob doesn't exist in target module
+   8 | import type { BackgroundVideo, VideoFormat } from "@/components/video-generator"
+   9 | import type { TextStyle } from "@/components/text-style-selector"
+> 10 | import { downloadBlob, recordVideoWithTextOverlay, convertWebmToMp4, getAudioDuration } from "@/lib/video-recorder"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+  12 | import { Progress } from "@/components/ui/progress"
+  13 |
+
+The export downloadBlob was not found in module [project]/lib/video-recorder.ts [app-client] (ecmascript).
 The module has no exports at all.
 All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
 
-Import trace:
-  Server Component:
-    ./components/video-generator.tsx
-    ./app/page.tsx
-[00:40:27.855] Browser ERROR   ./components/video-generator.tsx:6:1
-Export BackgroundVideoSelector doesn't exist in target module
-  4 | import { ScriptInput } from "@/components/script-input"
-  5 | import { VideoFormatSelector } from "@/components/video-format-selector"
-> 6 | import { BackgroundVideoSelector } from "@/components/background-video-selector"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  7 | import { VideoPreview, type VideoPreviewHandle } from "@/components/video-preview"
-  8 | import { GenerateButton } from "@/components/generate-button"
-  9 | import { TextStyleSelector, type TextStyle } from "@/components/text-style-selector"
+Import traces:
+  Client Component Browser:
+    ./components/generate-button.tsx [Client Component Browser]
+    ./components/video-generator.tsx [Client Component Browser]
+    ./components/video-generator.tsx [Server Component]
+    ./app/page.tsx [Server Component]
 
-The export BackgroundVideoSelector was not found in module [project]/components/background-video-selector.tsx [app-ssr] (ecmascript).
+  Client Component SSR:
+    ./components/generate-button.tsx [Client Component SSR]
+    ./components/video-generator.tsx [Client Component SSR]
+    ./components/video-generator.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+[00:11:29.873] Browser ERROR   ./components/generate-button.tsx:10:1
+Export downloadBlob doesn't exist in target module
+   8 | import type { BackgroundVideo, VideoFormat } from "@/components/video-generator"
+   9 | import type { TextStyle } from "@/components/text-style-selector"
+> 10 | import { downloadBlob, recordVideoWithTextOverlay, convertWebmToMp4, getAudioDuration } from "@/lib/video-recorder"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+  12 | import { Progress } from "@/components/ui/progress"
+  13 |
+
+The export downloadBlob was not found in module [project]/lib/video-recorder.ts [app-ssr] (ecmascript).
 The module has no exports at all.
 All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
 
-Import trace:
-  Server Component:
-    ./components/video-generator.tsx
-    ./app/page.tsx
-[00:40:27.963] Server  LOG      ✓ Compiled in 118ms
-[00:40:48.169] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:40:53.587] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:40:53.587] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:40:53.587] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765421454394}
-[00:41:00.494] Browser LOG     Probando Cobalt: https://cobalt.wuk.sh
-[00:41:01.663] Browser LOG     Probando Cobalt: https://api.cobalt.tools
-[00:41:03.463] Browser LOG     Probando Cobalt: https://cobalt.kwiatekmiki.com
-[00:41:04.184] Browser LOG     Cobalt falló. Probando tu API...
-[00:41:05.639] Browser ERROR   {}
-[00:43:05.926] Server  LOG      ✓ Compiled in 49ms
-[00:43:09.893] Server  LOG      ✓ Compiled in 52ms
+Import traces:
+  Client Component Browser:
+    ./components/generate-button.tsx [Client Component Browser]
+    ./components/video-generator.tsx [Client Component Browser]
+    ./components/video-generator.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/generate-button.tsx [Client Component SSR]
+    ./components/video-generator.tsx [Client Component SSR]
+    ./components/video-generator.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+[00:11:29.873] Browser ERROR   ./components/generate-button.tsx:10:1
+Export getAudioDuration doesn't exist in target module
+   8 | import type { BackgroundVideo, VideoFormat } from "@/components/video-generator"
+   9 | import type { TextStyle } from "@/components/text-style-selector"
+> 10 | import { downloadBlob, recordVideoWithTextOverlay, convertWebmToMp4, getAudioDuration } from "@/lib/video-recorder"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+  12 | import { Progress } from "@/components/ui/progress"
+  13 |
+
+The export getAudioDuration was not found in module [project]/lib/video-recorder.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/generate-button.tsx [Client Component Browser]
+    ./components/video-generator.tsx [Client Component Browser]
+    ./components/video-generator.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/generate-button.tsx [Client Component SSR]
+    ./components/video-generator.tsx [Client Component SSR]
+    ./components/video-generator.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+[00:11:29.873] Browser ERROR   ./components/generate-button.tsx:10:1
+Export getAudioDuration doesn't exist in target module
+   8 | import type { BackgroundVideo, VideoFormat } from "@/components/video-generator"
+   9 | import type { TextStyle } from "@/components/text-style-selector"
+> 10 | import { downloadBlob, recordVideoWithTextOverlay, convertWebmToMp4, getAudioDuration } from "@/lib/video-recorder"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+  12 | import { Progress } from "@/components/ui/progress"
+  13 |
+
+The export getAudioDuration was not found in module [project]/lib/video-recorder.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/generate-button.tsx [Client Component Browser]
+    ./components/video-generator.tsx [Client Component Browser]
+    ./components/video-generator.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/generate-button.tsx [Client Component SSR]
+    ./components/video-generator.tsx [Client Component SSR]
+    ./components/video-generator.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+[00:11:29.873] Browser ERROR   ./components/generate-button.tsx:10:1
+Export recordVideoWithTextOverlay doesn't exist in target module
+   8 | import type { BackgroundVideo, VideoFormat } from "@/components/video-generator"
+   9 | import type { TextStyle } from "@/components/text-style-selector"
+> 10 | import { downloadBlob, recordVideoWithTextOverlay, convertWebmToMp4, getAudioDuration } from "@/lib/video-recorder"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+  12 | import { Progress } from "@/components/ui/progress"
+  13 |
+
+The export recordVideoWithTextOverlay was not found in module [project]/lib/video-recorder.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/generate-button.tsx [Client Component Browser]
+    ./components/video-generator.tsx [Client Component Browser]
+    ./components/video-generator.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/generate-button.tsx [Client Component SSR]
+    ./components/video-generator.tsx [Client Component SSR]
+    ./components/video-generator.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+[00:11:29.873] Browser ERROR   ./components/generate-button.tsx:10:1
+Export recordVideoWithTextOverlay doesn't exist in target module
+   8 | import type { BackgroundVideo, VideoFormat } from "@/components/video-generator"
+   9 | import type { TextStyle } from "@/components/text-style-selector"
+> 10 | import { downloadBlob, recordVideoWithTextOverlay, convertWebmToMp4, getAudioDuration } from "@/lib/video-recorder"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 | import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+  12 | import { Progress } from "@/components/ui/progress"
+  13 |
+
+The export recordVideoWithTextOverlay was not found in module [project]/lib/video-recorder.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/generate-button.tsx [Client Component Browser]
+    ./components/video-generator.tsx [Client Component Browser]
+    ./components/video-generator.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/generate-button.tsx [Client Component SSR]
+    ./components/video-generator.tsx [Client Component SSR]
+    ./components/video-generator.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+[00:11:38.774] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:11:45.357] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:11:45.357] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:11:45.357] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765426089729}
+[00:12:47.143] Browser ERROR   unhandledRejection: AbortError: The play() request was interrupted by a call to pause(). https://goo.gl/LdLk22
+[00:16:52.359] Server  LOG      ✓ Compiled in 72ms
+[00:17:24.914] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:17:28.679] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:17:28.679] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:17:28.679] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765426433899}
+[00:24:17.560] Server  LOG      ✓ Compiled in 53ms
+[00:25:21.915] Server  LOG      ✓ Compiled in 237ms
+[00:29:33.700] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:29:41.869] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:29:41.869] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:29:41.869] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765427166518}
+[00:31:20.258] Browser ERROR   unhandledRejection: AbortError: The play() request was interrupted by a call to pause(). https://goo.gl/LdLk22
+[00:32:15.309] Browser ERROR   Error conversión MP4 (retornando original): ErrnoError: FS error
+[00:35:06.860] Server  LOG      ✓ Compiled in 173ms
+[00:36:35.403] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:36:36.352] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:36:36.352] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:36:36.352] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765427581310}
+[00:40:42.047] Browser ERROR   Fallo conversión a MP4. Devolviendo WebM original para no perder datos. {}
+[00:43:23.366] Server  LOG      ✓ Compiled in 55ms
+[00:44:50.388] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:45:22.289] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:45:22.289] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:45:22.289] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765428105995}
+[00:48:12.132] Browser LOG     [FFmpeg Log]: ffmpeg version 5.1.4 Copyright (c) 2000-2023 the FFmpeg developers
+[00:48:12.132] Browser LOG     [FFmpeg Log]:   built with emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 3.1.40 (5c27e79dd0a9c4e27ef2326841698cdd4f6b5784)
+[00:48:12.132] Browser LOG     [FFmpeg Log]:   configuration: --target-os=none --arch=x86_32 --enable-cross-compile --disable-asm --disable-stripping --disable-programs --disable-doc --disable-debug --disable-runtime-cpudetect --disable-autodetect --nm=emnm --ar=emar --ranlib=emranlib --cc=emcc --cxx=em++ --objcc=emcc --dep-cc=emcc --extra-cflags='-I/opt/include -O3 -msimd128' --extra-cxxflags='-I/opt/include -O3 -msimd128' --disable-pthreads --disable-w32threads --disable-os2threads --enable-gpl --enable-libx264 --enable-libx265 --enable-libvpx --enable-libmp3lame --enable-libtheora --enable-libvorbis --enable-libopus --enable-zlib --enable-libwebp --enable-libfreetype --enable-libfribidi --enable-libass --enable-libzimg
+[00:48:12.132] Browser LOG     [FFmpeg Log]:   libavutil      57. 28.100 / 57. 28.100
+[00:48:12.132] Browser LOG     [FFmpeg Log]:   libavcodec     59. 37.100 / 59. 37.100
+[00:48:12.132] Browser LOG     [FFmpeg Log]:   libavformat    59. 27.100 / 59. 27.100
+[00:48:12.132] Browser LOG     [FFmpeg Log]:   libavdevice    59.  7.100 / 59.  7.100
+[00:48:12.132] Browser LOG     [FFmpeg Log]:   libavfilter     8. 44.100 /  8. 44.100
+[00:48:12.132] Browser LOG     [FFmpeg Log]:   libswscale      6.  7.100 /  6.  7.100
+[00:48:12.132] Browser LOG     [FFmpeg Log]:   libswresample   4.  7.100 /  4.  7.100
+[00:48:12.132] Browser LOG     [FFmpeg Log]:   libpostproc    56.  6.100 / 56.  6.100
+[00:48:13.916] Browser LOG     [FFmpeg Log]: [matroska,webm @ 0xdea2e0] 0x00 at pos 36 (0x24) invalid as first byte of an EBML number
+[00:48:13.916] Browser LOG     [FFmpeg Log]: input.webm: End of file
+[00:48:13.916] Browser LOG     [FFmpeg Log]: Aborted()
+[00:48:13.916] Browser ERROR   Fallo conversión a MP4. Se usará el video WebM original. {}
+[00:52:24.040] Server  LOG      ✓ Compiled in 71ms
+[00:53:22.126] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:55:11.119] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:55:11.119] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:55:11.119] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"https://refactored-halibut-r4g54pvgq9ggf5wr9-3000.app.github.dev/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1765428696457}

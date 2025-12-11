@@ -7,7 +7,7 @@ import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
-import { Check, Play, Link, Upload, Loader2, Youtube, Download, AlertCircle, ExternalLink } from "lucide-react"
+import { Check, Play, Link, Upload, Loader2, Youtube, Download, AlertCircle, ExternalLink, Video } from "lucide-react"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Progress } from "@/components/ui/progress"
 import type { BackgroundVideo } from "@/components/video-generator"
@@ -38,23 +38,75 @@ interface BackgroundVideoSelectorProps {
 const categories = ["Custom", "Satisfactorio", "Subway S.", "Minecraft", "GTA"]
 
 // =====================================================================
-// 2. VIDEOS DE EJEMPLO
+// 2. TUS VIDEOS LOCALES (Ya descargados)
 // =====================================================================
+// Asegúrate de que los nombres de archivo coincidan EXACTAMENTE con los que subiste a public/videos/
 const backgroundVideos: BackgroundVideo[] = [
   {
-    id: "mc1", category: "Minecraft", title: "Minecraft Parkour",
-    thumbnail: "https://i.ytimg.com/vi/075J5107e9Y/hqdefault.jpg",
-    videoUrl: "https://www.youtube.com/watch?v=075J5107e9Y", isYoutube: true, youtubeId: "075J5107e9Y"
+    id: "mc1", 
+    category: "Minecraft", 
+    title: "Minecraft Parkour",
+    // Usa una captura del video o un placeholder si no tienes imagen
+    thumbnail: "/placeholder.svg", 
+    // Ruta relativa a la carpeta public
+    videoUrl: "/videos/Minecraft Parkour 7 Minutes Free To Use Gameplay No Copyright 2023 60 FPS.mp4", 
+    isYoutube: false // ¡Importante! Ya no es YouTube
   },
   {
-    id: "ss1", category: "Subway S.", title: "Subway Surfers Gameplay",
-    thumbnail: "https://i.ytimg.com/vi/hs7Z0JUgDeA/hqdefault.jpg",
-    videoUrl: "https://www.youtube.com/watch?v=hs7Z0JUgDeA", isYoutube: true, youtubeId: "hs7Z0JUgDeA"
+    id: "mc2", 
+    category: "Minecraft", 
+    title: "Parkour Rápido",
+    thumbnail: "/placeholder.svg", 
+    videoUrl: "/videos/Parkour 2.mp4", 
+    isYoutube: false
   },
   {
-    id: "gta1", category: "GTA", title: "GTA V Ramp Stunts",
-    thumbnail: "https://i.ytimg.com/vi/NfJ5r5Fj80o/hqdefault.jpg",
-    videoUrl: "https://www.youtube.com/watch?v=NfJ5r5Fj80o", isYoutube: true, youtubeId: "NfJ5r5Fj80o"
+    id: "mc3", 
+    category: "Minecraft", 
+    title: "Parkour Extremo",
+    thumbnail: "/placeholder.svg", 
+    videoUrl: "/videos/Parkour 3.mp4", 
+    isYoutube: false
+  },
+  {
+    id: "ss1", 
+    category: "Subway S.", 
+    title: "Subway Run 1",
+    thumbnail: "/placeholder.svg", 
+    videoUrl: "/videos/run 1.mp4", 
+    isYoutube: false
+  },
+  {
+    id: "ss2", 
+    category: "Subway S.", 
+    title: "Subway Run 2",
+    thumbnail: "/placeholder.svg", 
+    videoUrl: "/videos/run 2.mp4", 
+    isYoutube: false
+  },
+  {
+    id: "ss3", 
+    category: "Subway S.", 
+    title: "Subway Run 3",
+    thumbnail: "/placeholder.svg", 
+    videoUrl: "/videos/run 3.mp4", 
+    isYoutube: false
+  },
+  {
+    id: "gta1", 
+    category: "GTA", 
+    title: "GTA V Stunts",
+    thumbnail: "/placeholder.svg", 
+    videoUrl: "/videos/gta 2.mp4", 
+    isYoutube: false
+  },
+  {
+    id: "sat1", 
+    category: "Satisfactorio", 
+    title: "Satisfying Loop",
+    thumbnail: "/placeholder.svg", 
+    videoUrl: "/videos/satisfactory.mp4", 
+    isYoutube: false
   }
 ]
 
@@ -73,8 +125,6 @@ export function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }: Bac
   
   // Datos temporales
   const [previewInfo, setPreviewInfo] = useState<any>(null)
-  
-  // Estado para el fallback manual
   const [manualLink, setManualLink] = useState<string | null>(null)
   const [isApiLimitError, setIsApiLimitError] = useState(false)
 
@@ -102,7 +152,7 @@ export function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }: Bac
     setIsApiLimitError(false);
   }
 
-  // --- 2. MOTOR DE DESCARGA ---
+  // --- 2. MOTOR DE DESCARGA (Solo para URLs nuevas que pegue el usuario) ---
   const handleDownload = async (urlOverride?: string, infoOverride?: any) => {
     const targetUrl = urlOverride || youtubeUrl;
     const targetInfo = infoOverride || previewInfo;
@@ -122,10 +172,9 @@ export function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }: Bac
     try {
       let downloadLink = "";
 
-      // --- INTENTO A: COBALT (Gratis) ---
+      // --- INTENTO A: COBALT ---
       for (const instance of COBALT_INSTANCES) {
           try {
-              console.log(`Probando Cobalt: ${instance}`);
               let res = await fetch(`${instance}/`, {
                   method: "POST",
                   headers: { "Accept": "application/json", "Content-Type": "application/json" },
@@ -146,11 +195,8 @@ export function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }: Bac
           } catch (e) { }
       }
 
-      // --- INTENTO B: RAPIDAPI (Tu Clave) ---
+      // --- INTENTO B: RAPIDAPI ---
       if (!downloadLink) {
-          console.log("Cobalt falló. Probando tu API...");
-          setStatusMsg("Usando tu API...");
-          
           const apiUrl = `https://${RAPID_API_HOST}/v2/video/details?videoId=${videoId}`;
           const apiRes = await fetch(apiUrl, {
             method: 'GET',
@@ -160,10 +206,8 @@ export function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }: Bac
             }
           });
 
-          // CORRECCIÓN CLAVE: Si la API da 429, activamos manual inmediatamente
           if (apiRes.status === 429) {
               setIsApiLimitError(true);
-              // Ponemos una web externa genérica porque no pudimos sacar el link directo
               setManualLink("https://cobalt.tools"); 
               throw new Error("Cuota agotada. Usa la opción manual.");
           }
@@ -172,13 +216,13 @@ export function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }: Bac
               const data = await apiRes.json();
               if (data.videos?.items) {
                   const best = data.videos.items.find((v: any) => v.quality === '720p' && v.extension === 'mp4') 
+                            || data.videos.items.find((v: any) => v.extension === 'mp4')
                             || data.videos.items[0];
                   downloadLink = best?.url;
               }
           }
       }
 
-      // Si después de todo no hay link, activamos fallback a web externa
       if (!downloadLink) {
           setManualLink("https://cobalt.tools"); 
           throw new Error("No se pudo obtener enlace automático.");
@@ -188,7 +232,6 @@ export function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }: Bac
       setStatusMsg("Guardando archivo...");
       setProgress(60);
 
-      // --- FASE FINAL: DESCARGA AL NAVEGADOR ---
       try {
           const safeLink = CORS_PROXY + encodeURIComponent(downloadLink);
           const fileRes = await fetch(safeLink);
@@ -201,14 +244,12 @@ export function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }: Bac
           saveVideoToApp(localUrl, targetInfo);
 
       } catch (fetchError) {
-          // Si tenemos el link pero falla la descarga (CORS), damos el link al usuario
           setManualLink(downloadLink); 
           throw new Error("Descarga automática bloqueada por el navegador.");
       }
 
     } catch (err: any) {
       console.error(err);
-      // Si ya activamos el link manual, no mostramos error rojo
       if (!manualLink) setErrorMsg(err.message || "Error desconocido");
     } finally {
       clearInterval(interval);
@@ -311,18 +352,12 @@ export function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }: Bac
                              </div>
                         )}
 
-                        {/* === ZONA DE EMERGENCIA MANUAL === */}
                         {manualLink && (
                             <div className="p-3 bg-yellow-500/10 border border-yellow-500/30 rounded-lg space-y-2 mt-2 animate-in slide-in-from-top-2">
                                 <div className="flex items-center gap-2 text-yellow-600 text-sm font-medium">
                                     <AlertCircle className="w-4 h-4"/>
                                     {isApiLimitError ? "Tu API se agotó (429)" : "Descarga automática bloqueada"}
                                 </div>
-                                <p className="text-xs text-muted-foreground">
-                                    {isApiLimitError 
-                                        ? "Has superado el límite de la clave RapidAPI. Usa esta web gratuita:" 
-                                        : "El navegador no permitió la descarga directa. Hazlo manualmente:"}
-                                </p>
                                 <div className="grid grid-cols-2 gap-2">
                                     <Button size="sm" variant="outline" className="text-xs" 
                                         onClick={() => window.open(manualLink, '_blank')}>
@@ -363,6 +398,8 @@ export function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }: Bac
                             selectedVideo?.id === video.id ? "ring-2 ring-primary" : "hover:opacity-80"
                         )}
                         onClick={() => {
+                            // Al hacer clic en un video local, lo seleccionamos directamente
+                            // ya no intentamos descargar porque YA lo tienes
                             if (video.isYoutube && !activeCategory.includes("Custom")) {
                                 handleDownload(video.videoUrl, video); 
                             } else {
@@ -370,11 +407,21 @@ export function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }: Bac
                             }
                         }}
                     >
-                        <img src={video.thumbnail} className="w-full h-full object-cover opacity-70"/>
+                        {/* Como son videos locales, usamos el propio video como thumbnail si no hay imagen */}
+                        {video.videoUrl.endsWith('.mp4') ? (
+                            <video src={video.videoUrl} className="w-full h-full object-cover opacity-70 pointer-events-none" />
+                        ) : (
+                            <img src={video.thumbnail} className="w-full h-full object-cover opacity-70"/>
+                        )}
+                        
                         {loading && (selectedVideo?.id === video.id || (youtubeUrl && video.videoUrl === youtubeUrl)) && (
                             <div className="absolute inset-0 bg-black/60 flex items-center justify-center"><Loader2 className="animate-spin text-white"/></div>
                         )}
-                        <div className="absolute top-1 left-1">{video.isYoutube ? <Youtube className="w-3 h-3 text-red-500"/> : <Check className="w-3 h-3 text-white"/>}</div>
+                        
+                        <div className="absolute top-1 left-1">
+                            {video.isYoutube ? <Youtube className="w-3 h-3 text-red-500"/> : <Video className="w-3 h-3 text-white"/>}
+                        </div>
+                        
                         <div className="absolute bottom-0 w-full p-1 bg-gradient-to-t from-black to-transparent">
                             <p className="text-[10px] text-white font-bold truncate">{video.title}</p>
                         </div>
