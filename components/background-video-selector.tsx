@@ -235,17 +235,27 @@ export function BackgroundVideoSelector({ selectedVideo, setSelectedVideo }: Bac
       try {
           const safeLink = CORS_PROXY + encodeURIComponent(downloadLink);
           const fileRes = await fetch(safeLink);
-          
           if (!fileRes.ok) throw new Error("Bloqueo de red");
-          
           const blob = await fileRes.blob();
-          const localUrl = URL.createObjectURL(blob);
-          
+          const localUrl = URL.createObjectURL(blob);          
           saveVideoToApp(localUrl, targetInfo);
 
       } catch (fetchError) {
-          setManualLink(downloadLink); 
-          throw new Error("Descarga automática bloqueada por el navegador.");
+          // Fallback: pedimos al backend que descargue el archivo para evitar bloqueos CORS del navegador.
+          const proxyRes = await fetch("/api/youtube/stream", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ url: targetUrl }),
+          });
+
+          if (!proxyRes.ok) {
+            setManualLink(downloadLink);
+            throw new Error("Descarga automática bloqueada por el navegador.");
+          }
+
+          const proxyBlob = await proxyRes.blob();
+          const localUrl = URL.createObjectURL(proxyBlob);
+          saveVideoToApp(localUrl, targetInfo);
       }
 
     } catch (err: any) {
